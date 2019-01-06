@@ -1,7 +1,7 @@
 
-package javaapplication8;
+package math2;
 
-public class JavaApplication8 {
+public class math2 {
 
     public static void main(String[] args) {
         // TODO code application logic 
