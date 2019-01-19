@@ -154,5 +154,22 @@ public class CasosTestCuentaCorriente {
         //ConsultarSaldoCuenta
         
         cuentaCorrienteMarcosEmbargadaBanco.consultarCuentaCorriente();
+        
+        //SaldoNegativoCuenta
+        
+         cuentaCorrienteMarcosEmbargadaBanco.saldoNegativoCuenta();
+        if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() >0 == true){
+            System.out.println("Es correcto");
+        }
+        else {
+            System.out.println("Incorrecto");
+        }
+            cuentaCorrienteMarcosEmbargadaBanco.saldoNegativoCuenta();
+        if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() >0 == false){
+            System.out.println("Es correcto");
+        }
+        else {
+            System.out.println("Incorrecto");
+        }
     }
 }

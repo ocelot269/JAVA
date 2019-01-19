@@ -70,6 +70,14 @@ public void ingresarSaldo(double dineroIngresado){ //El dinero se suma a tu cuen
 public void consultarCuentaCorriente(){
     System.out.println("Hola " + getNombreCliente() + " " + getApellidosCliente() + " tu saldo es de " + getSaldoCliente() + " €.");
 }
+public boolean saldoNegativoCuenta(){//Te permite concer si el saldo de la cuenta será negativa devolviendo un boolean
+    if (getSaldoCliente()>=0){
+        return false;
+    }
+    else {
+        return true;
+    }
+}
 }
 
 
