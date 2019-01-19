@@ -9,7 +9,7 @@ public class testDni_if {
     
 
   public static void main(String[] args) {
-    Dni midni = new Dni("53224953h");
+    Dni midni = new Dni("53224953");
     System.out.println(midni.getParteNumerica());
     if (midni.getDni().equalsIgnoreCase("43224953h")){
           System.out.println("Es correcto");
@@ -18,7 +18,9 @@ public class testDni_if {
     }
     
     System.out.println(midni.getParteNumerica());
-    
+    System.out.println(midni.getLetraDni());
+    System.out.println(midni.getObtenerLetraDni());
+      
     
     }
 }
