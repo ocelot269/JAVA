@@ -115,6 +115,11 @@ public class CasosTestCuentaCorriente {
         else {
             System.out.println("No es correcto");
         }
+        
+        
+        
+        
+        //Retirar dinero
         cuentaCorrienteMarcosEmbargadaBanco.retirarDinero(100);
         if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() == -100){
             System.out.println("Es correcto");
@@ -129,6 +134,22 @@ public class CasosTestCuentaCorriente {
         }
         else {
             System.out.println("Es incorrecto");
+        }
+        //Ingresar Saldo
+        cuentaCorrienteMarcosEmbargadaBanco.ingresarSaldo(1100);
+        if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() == 0){
+            System.out.println("Es correcto");
+        }
+        else {
+            System.out.println("Incorrecto");
+        }
+        
+         cuentaCorrienteMarcosEmbargadaBanco.ingresarSaldo(1100);
+        if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() == 100){
+            System.out.println("Es correcto");
+        }
+        else {
+            System.out.println("Incorrecto");
         }
     }
 }

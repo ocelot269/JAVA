@@ -61,8 +61,11 @@ public void setSaldoCliente(double saldo){
     this.saldo+=saldo;
 }
 //Fin Setters
-public void retirarDinero(double dineroRetirado){
-    setSaldoCliente(-dineroRetirado);
+public void retirarDinero(double dineroRetirado){ //El dinero se resta de la cuenta 
+    setSaldoCliente(-dineroRetirado);   
+}
+public void ingresarSaldo(double dineroIngresado){ //El dinero se suma a tu cuenta
+    setSaldoCliente(dineroIngresado);
 }
 }
 
