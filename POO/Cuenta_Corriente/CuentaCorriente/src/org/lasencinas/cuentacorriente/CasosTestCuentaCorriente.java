@@ -115,7 +115,20 @@ public class CasosTestCuentaCorriente {
         else {
             System.out.println("No es correcto");
         }
+        cuentaCorrienteMarcosEmbargadaBanco.retirarDinero(100);
+        if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() == -100){
+            System.out.println("Es correcto");
+        }
+        else {
+            System.out.println("Es incorrecto");
+        }
         
-        
+        cuentaCorrienteMarcosEmbargadaBanco.retirarDinero(1000);
+        if ( cuentaCorrienteMarcosEmbargadaBanco.getSaldoCliente() == -1100){
+            System.out.println("Es correcto");
+        }
+        else {
+            System.out.println("Es incorrecto");
+        }
     }
 }

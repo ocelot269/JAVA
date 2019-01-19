@@ -15,6 +15,8 @@ public  CuentaCorriente(String nombre,String apellidos,String direccion,String t
     this.nif = nif;
     this.saldo=0;
 }
+
+//Getters
 public String getNombreCliente(){
     return this.nombre;
     }
@@ -34,6 +36,12 @@ public boolean getNifCliente(){
 public double getSaldoCliente(){
     return this.saldo;
 }
+
+
+//Fin Getters
+
+
+//Inicio Setters
 public void setNombreCliente(String nombre){
     this.nombre=nombre;
 }
@@ -51,6 +59,10 @@ public void setNifCliente(boolean nif){
 }
 public void setSaldoCliente(double saldo){
     this.saldo+=saldo;
+}
+//Fin Setters
+public void retirarDinero(double dineroRetirado){
+    setSaldoCliente(-dineroRetirado);
 }
 }
 
