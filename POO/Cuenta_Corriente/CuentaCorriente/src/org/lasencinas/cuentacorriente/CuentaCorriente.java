@@ -67,6 +67,9 @@ public void retirarDinero(double dineroRetirado){ //El dinero se resta de la cue
 public void ingresarSaldo(double dineroIngresado){ //El dinero se suma a tu cuenta
     setSaldoCliente(dineroIngresado);
 }
+public void consultarCuentaCorriente(){
+    System.out.println("Hola " + getNombreCliente() + " " + getApellidosCliente() + " tu saldo es de " + getSaldoCliente() + " €.");
+}
 }
 
 

@@ -151,5 +151,8 @@ public class CasosTestCuentaCorriente {
         else {
             System.out.println("Incorrecto");
         }
+        //ConsultarSaldoCuenta
+        
+        cuentaCorrienteMarcosEmbargadaBanco.consultarCuentaCorriente();
     }
 }
