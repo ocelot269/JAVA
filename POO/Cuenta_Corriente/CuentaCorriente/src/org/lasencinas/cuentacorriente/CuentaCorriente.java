@@ -31,7 +31,27 @@ public String getTelefonoCliente(){
 public boolean getNifCliente(){
     return this.nif;
 }
-
+public double getSaldoCliente(){
+    return this.saldo;
+}
+public void setNombreCliente(String nombre){
+    this.nombre=nombre;
+}
+public void setApellidoCliente(String apellidos){
+    this.apellidos=apellidos;
+}
+public void setDireccionCliente(String direccion){
+    this.direccion=direccion;
+}
+public void setTelefonoCliente(String telefono){
+    this.telefono=telefono;
+}
+public void setNifCliente(boolean nif){
+    this.nif=nif;
+}
+public void setSaldoCliente(double saldo){
+    this.saldo+=saldo;
+}
 }
 
 
