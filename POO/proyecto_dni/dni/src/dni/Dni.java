@@ -29,7 +29,7 @@ public class Dni {
         
     }
             
-   public String getObtenerLetraDni(){
+    public String getObtenerLetraDni(){
        return this.tablaAsignacion.calcularLetraDni(getParteNumerica());
        
    }
