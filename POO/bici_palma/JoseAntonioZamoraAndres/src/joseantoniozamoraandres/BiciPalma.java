@@ -3,7 +3,7 @@ package joseantoniozamoraandres;
 
 
 import bicicleta.Bicicleta;
-import estaciones.Estacion;
+import estacion.Estacion;
 import tarjetaUsuario.TarjetaUsuario;
 
     public class BiciPalma {
