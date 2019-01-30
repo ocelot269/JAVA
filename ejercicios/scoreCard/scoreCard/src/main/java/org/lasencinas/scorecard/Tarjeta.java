@@ -32,11 +32,16 @@ public class Tarjeta {
         }
         
     }
-    public int computarSpare(char spare){
-        if (spare == ('/')){
+    public int computarSpare(String puntuacion){
+        try {
+        if (puntuacion.charAt(1) == ('/')){
             return SPARE;
         }
         else {
+            return CERO;
+        }
+        }
+        catch (StringIndexOutOfBoundsException e){
             return CERO;
         }
     }
@@ -47,10 +52,8 @@ public class Tarjeta {
     public int computarTarjetaVeinteBolas(){
         for (int i=0; i <getTarjetaPuntuacion().length(); i++)
             if (getTarjetaPuntuacion().charAt(i)== '/'){
-                if (i < 19 ) {
                     puntuacionTotal+= -getTarjetaPuntuacion().charAt(i - 1) + 10 + getTarjetaPuntuacion().charAt(i + 1); 
                 }
-            }
             else {
                 puntuacionTotal+= computarPins(getTarjetaPuntuacion().charAt(i));
             } 
