@@ -29,7 +29,7 @@ public class Tarjeta {
     }
     
     
-//----------Constructores------------------//
+//----------Fin Constructores------------------//
     
     
 //-----------Setters y getters------------//
@@ -82,10 +82,10 @@ public class Tarjeta {
     
     public int computarTarjetaVeinteBolas(){        //Comprueba toda la tarjeta y va sumando las bolas
         for (int bolas=0; bolas <getTarjetaPuntuacion().length(); bolas++)
-            if (getTarjetaPuntuacion().charAt(bolas)== '/'){
+            if (getTarjetaPuntuacion().charAt(bolas)== '/'){ //Comprueba que es spare y suma 10,restando la anterior bola y luego suma la siguiente bola
                     puntuacionTotal+= -getTarjetaPuntuacion().charAt(bolas - 1) + SPARE + getTarjetaPuntuacion().charAt(bolas + 1); 
                 }
-            else if (getTarjetaPuntuacion().charAt(bolas)== 'X'){
+            else if (getTarjetaPuntuacion().charAt(bolas)== 'X'){ //comprueba que es strike y suma 10 mas la 2 siguientes bolas
                     puntuacionTotal+= STRIKE + computarPins(getTarjetaPuntuacion().charAt(bolas +1)) + computarPins(getTarjetaPuntuacion().charAt(bolas + 2));
             }
             else {
@@ -95,6 +95,6 @@ public class Tarjeta {
     }
     
     
-    //--------------------Fin metodos-------------------------//
+    //--------------------Fin de los metodos-------------------------//
     
 }
