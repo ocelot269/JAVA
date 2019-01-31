@@ -42,6 +42,26 @@ public class TarjetaIT {
     @Test
     public void computarTarjetaVeinteBolasTest3(){
         Tarjeta tarjeta= new Tarjeta("5/5/5/5/5/5/5/5/5/5-5");
-        assertEquals(150,tarjeta.computarTarjetaVeinteBolas());
+        assertEquals(145,tarjeta.computarTarjetaVeinteBolas());
+    }
+    @Test
+    public void computarTarjetaVeinteBolasTest4(){
+        Tarjeta tarjeta= new Tarjeta("9/5/5/5/5/5/5/5/5/5-5");
+        assertEquals(145,tarjeta.computarTarjetaVeinteBolas());
+    }
+    @Test
+    public void computarTarjetaVeinteBolasTest5(){
+        Tarjeta tarjeta= new Tarjeta("9/9/3/5/2/-/7/2/1/21-");
+        assertEquals(124,tarjeta.computarTarjetaVeinteBolas());
+    }
+    @Test
+    public void computarTarjetaVeinteBolasTest6(){
+        Tarjeta tarjeta= new Tarjeta("XXXXXXXXX11");
+        assertEquals(245,tarjeta.computarTarjetaVeinteBolas());
+    }
+    @Test
+    public void computarTarjetaVeinteBolasTest7(){
+      Tarjeta tarjeta = new Tarjeta ("1/27XXX-/X3/X11");
+      assertEquals(165,tarjeta.computarTarjetaVeinteBolas());
     }
 }
