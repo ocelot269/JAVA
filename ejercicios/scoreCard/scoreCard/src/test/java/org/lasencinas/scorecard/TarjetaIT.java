@@ -64,4 +64,10 @@ public class TarjetaIT {
       Tarjeta tarjeta = new Tarjeta ("1/27XXX-/X3/X11");
       assertEquals(165,tarjeta.computarTarjetaVeinteBolas());
     }
+    @Test
+    public void computarTarjetaVeinteBolasTest8(){
+      Tarjeta tarjeta = new Tarjeta ("1/--");
+      assertEquals(10,tarjeta.computarTarjetaVeinteBolas());
+    }
+    
 }
