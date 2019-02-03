@@ -46,8 +46,8 @@ public class TarjetaIT {
     }
     @Test
     public void computarTarjetaVeinteBolasTest4(){
-        Tarjeta tarjeta= new Tarjeta("9/5/5/5/5/5/5/5/5/5-5");
-        assertEquals(145,tarjeta.computarTarjetaVeinteBolas());
+        Tarjeta tarjeta= new Tarjeta("5/5/5/5/5/5/5/5/5/5/5");
+        assertEquals(150,tarjeta.computarTarjetaVeinteBolas());
     }
     @Test
     public void computarTarjetaVeinteBolasTest5(){

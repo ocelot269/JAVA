@@ -87,22 +87,40 @@ public class Tarjeta {
     
     
     public int computarTarjetaVeinteBolas(){        //Comprueba toda la tarjeta y va sumando las bolas
+        int contadorbolas = 0;
         for (int bolas=0; bolas <getTarjetaPuntuacion().length(); bolas++)
-            if (getTarjetaPuntuacion().charAt(bolas)== '/'){ //Comprueba que es spare y suma 10,restando la anterior bola y luego suma la siguiente bola
-                    puntuacionTotal+= getSpare()  - computarPins(getTarjetaPuntuacion().charAt(bolas - 1)) + computarPins(getTarjetaPuntuacion().charAt(bolas + 1)); 
+            if ( contadorbolas < 19){
+                if (getTarjetaPuntuacion().charAt(bolas)== '/'){ //Comprueba que es spare y suma 10,restando la anterior bola y luego suma la siguiente bola
+                        puntuacionTotal+= getSpare()  - computarPins(getTarjetaPuntuacion().charAt(bolas - 1)) + computarPins(getTarjetaPuntuacion().charAt(bolas + 1)); 
+                        contadorbolas+=2;
+                    }
+                else if (getTarjetaPuntuacion().charAt(bolas)== 'X'){ //comprueba que es strike 
+                        if (getTarjetaPuntuacion().charAt(bolas + 2) == '/'){//Ahora comprueba que en las siguientes 2 bolas si hay un spare
+                            puntuacionTotal+=getStrike() + getSpare() -computarPins(getTarjetaPuntuacion().charAt(bolas +1)); //te suma el strike + el spare y te resta la siguiente tirada 
+                        }
+                        else {
+                            puntuacionTotal+= getStrike() + computarPins(getTarjetaPuntuacion().charAt(bolas +1)) + computarPins(getTarjetaPuntuacion().charAt(bolas + 2));//Sino hace un strike normal;
+
+                        }
+                        contadorbolas+=2;
                 }
-            else if (getTarjetaPuntuacion().charAt(bolas)== 'X'){ //comprueba que es strike 
-                    if (getTarjetaPuntuacion().charAt(bolas + 2) == '/'){//Ahora comprueba que en las siguientes 2 bolas si hay un spare
-                        puntuacionTotal+=getStrike() + getSpare() -computarPins(getTarjetaPuntuacion().charAt(bolas +1)); //te suma el strike + el spare y te resta la siguiente tirada 
-                    }
-                    else {
-                        puntuacionTotal+= getStrike() + computarPins(getTarjetaPuntuacion().charAt(bolas +1)) + computarPins(getTarjetaPuntuacion().charAt(bolas + 2));//Sino hace un strike normal;
-                    }
+                else {
+                    puntuacionTotal+= computarPins(getTarjetaPuntuacion().charAt(bolas));//Suma las tiradas normales
+                    contadorbolas+=1;
+                }
             }
             else {
-                puntuacionTotal+= computarPins(getTarjetaPuntuacion().charAt(bolas));//Suma las tiradas normales
-            } 
-        return puntuacionTotal;
+                 if (getTarjetaPuntuacion().charAt(bolas)== '/'){
+                     puntuacionTotal+= getSpare()  - computarPins(getTarjetaPuntuacion().charAt(bolas - 1));
+                }
+                else if (getTarjetaPuntuacion().charAt(bolas)== 'X'){
+                    puntuacionTotal+= getStrike();
+                }
+                else {
+                    puntuacionTotal+= computarPins(getTarjetaPuntuacion().charAt(bolas));
+                }
+            }
+            return puntuacionTotal;
     }
     
     
