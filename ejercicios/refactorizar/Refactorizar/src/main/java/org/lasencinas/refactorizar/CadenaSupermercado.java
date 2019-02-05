@@ -63,12 +63,12 @@ public class CadenaSupermercado {
        }
        
        public void setMayorGanancia (double supermercado){
-           mayorGanancia+=supermercado;
+           mayorGanancia=supermercado;
        }
        
        
        public void setMenorGanancia (double supermercado){
-           menorGanancia+=supermercado;
+           menorGanancia=supermercado;
        }
        
        
@@ -99,7 +99,7 @@ public class CadenaSupermercado {
                 setMayorGanancia(getGananciaSuperMercado()[tienda]);
                 setPosicionTiendaMasVende(tienda);                         
             }
-            else {
+            else if (getGananciaSuperMercado()[tienda] < getMenorGananciaTienda()) {
                 setMenorGanancia(getGananciaSuperMercado()[tienda]);
                 setPosicionTiendaMenosVende(tienda);
             }
