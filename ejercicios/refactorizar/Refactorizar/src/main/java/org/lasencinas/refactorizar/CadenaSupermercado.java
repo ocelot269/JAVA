@@ -95,13 +95,13 @@ public class CadenaSupermercado {
        public void calcularGananaciasSuperMercado(){ //Te dice el total de ganancias de todos los supermercados
         for (int tienda = 0; tienda < getGananciaSuperMercado().length; tienda++) {
             
-            if (getGananciaSuperMercado()[tienda] > getMayorGananciaTienda()) {                 //asigna la mayor ganancia a posicionMayor
-                setMayorGanancia(getGananciaSuperMercado()[tienda]);
-                setPosicionTiendaMasVende(tienda);                         
+            if (getGananciaSuperMercado()[tienda] > getMayorGananciaTienda()) {                 
+                setMayorGanancia(getGananciaSuperMercado()[tienda]); //asigna la mayor ganancia 
+                setPosicionTiendaMasVende(tienda);         //asigna la posicion de la mayor ganancia               
             }
-            else if (getGananciaSuperMercado()[tienda] < getMenorGananciaTienda()) {
-                setMenorGanancia(getGananciaSuperMercado()[tienda]);
-                setPosicionTiendaMenosVende(tienda);
+            else if (getGananciaSuperMercado()[tienda] < getMenorGananciaTienda()) { 
+                setMenorGanancia(getGananciaSuperMercado()[tienda]); //assigna la menor ganancia
+                setPosicionTiendaMenosVende(tienda); //assigna la posicion de la menor ganancia
             }
             setTotalGananciasSuperMercados(getGananciaSuperMercado()[tienda]);
         } 

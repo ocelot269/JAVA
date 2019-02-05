@@ -24,9 +24,15 @@ public class CadenaSupermercadoIT {
         assertEquals(1,mercado1.getPosicionTiendaMenosVende());
     }
     @Test
-    public void getPosicionTiendaMasVende() {
+    public void getPosicionTiendaMasVendeTest() {
         CadenaSupermercado mercado1 = new CadenaSupermercado();
         mercado1.calcularGananaciasSuperMercado();
         assertEquals(0,mercado1.getPosicionTiendaMasVende());
+    }
+    @Test
+    public void getPosicionTiendaMenosVendeTest() {
+        CadenaSupermercado mercado1 = new CadenaSupermercado();
+        mercado1.calcularGananaciasSuperMercado();
+        assertEquals(1,mercado1.getPosicionTiendaMenosVende());
     }
 }
