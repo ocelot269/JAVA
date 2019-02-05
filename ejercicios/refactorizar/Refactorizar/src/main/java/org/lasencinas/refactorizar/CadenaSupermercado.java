@@ -11,12 +11,12 @@ public class CadenaSupermercado {
     public static void main(String[] args) {
         
     }
-        double[] gananciaSuperMercado = {8000, 320.35, 930, 1020.99, 650};
-        double mayorGanancia = gananciaSuperMercado[0];
-        double menorGanancia = gananciaSuperMercado[0];
-        double totalGananciasSuperMercados = 0;
-        int gananciaMayor = 0;
-        int gananciaMenor = 0;
+       private final double[] GANANCIAS_SUPER_MERCADO = {8000, 320.35, 930, 1020.99, 650};
+       private double mayorGanancia = GANANCIAS_SUPER_MERCADO[0];
+       private double menorGanancia = GANANCIAS_SUPER_MERCADO[0];
+       private double totalGananciasSuperMercados = 0;
+       private int posicionGananciaMayor = 0;
+       private int posicionGananciaMenor = 0;
       
         
     //------------------------Fin inicializacion-----------------------------------//    
@@ -36,7 +36,7 @@ public class CadenaSupermercado {
         
         
         public double [] getGananciaSuperMercado(){
-           return gananciaSuperMercado;  
+           return GANANCIAS_SUPER_MERCADO;  
        }
        
         
@@ -46,12 +46,12 @@ public class CadenaSupermercado {
        
        
        public int getPosicionTiendaMenosVende () {
-           return gananciaMenor;
+           return posicionGananciaMenor;
        }
        
        
        public int getPosicionTiendaMasVende () {
-           return gananciaMayor;
+           return posicionGananciaMayor;
        }
        
        public double getMenorGananciaTienda () {
@@ -78,12 +78,12 @@ public class CadenaSupermercado {
        
        
        public void setPosicionTiendaMasVende (int ganancia){
-           gananciaMayor=  ganancia;
+           posicionGananciaMayor=  ganancia;
        }
        
        
        public void setPosicionTiendaMenosVende (int ganancia){
-           gananciaMenor=  ganancia;
+           posicionGananciaMenor=  ganancia;
        }
     
        
@@ -95,16 +95,16 @@ public class CadenaSupermercado {
        public void calcularGananaciasSuperMercado(){ //Te dice el total de ganancias de todos los supermercados
         for (int tienda = 0; tienda < getGananciaSuperMercado().length; tienda++) {
             
-            if (gananciaSuperMercado[tienda] > mayorGanancia) {                 //asigna la mayor ganancia a posicionMayor
-                setMayorGanancia(gananciaSuperMercado[tienda]);
+            if (getGananciaSuperMercado()[tienda] > getMayorGananciaTienda()) {                 //asigna la mayor ganancia a posicionMayor
+                setMayorGanancia(getGananciaSuperMercado()[tienda]);
                 setPosicionTiendaMasVende(tienda);                         
             }
             else {
-                setMenorGanancia(gananciaSuperMercado[tienda]);
-                setMenorGanancia(tienda);
+                setMenorGanancia(getGananciaSuperMercado()[tienda]);
+                setPosicionTiendaMenosVende(tienda);
             }
-            setTotalGananciasSuperMercados(gananciaSuperMercado[tienda]);
-        }
+            setTotalGananciasSuperMercados(getGananciaSuperMercado()[tienda]);
+        } 
        }
        
     //-------------------Fin metodos logica---------------------------------//   

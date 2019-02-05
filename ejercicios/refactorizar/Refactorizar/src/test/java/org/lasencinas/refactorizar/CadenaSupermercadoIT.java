@@ -18,9 +18,15 @@ public class CadenaSupermercadoIT {
         assertEquals(10921.34, mercado1.getTotalGananciasSuperMercados(),2);
     }
     @Test
-    public void calcularGananaciasSuperMercadoTest1() {
+    public void getPosicionTiendaMenosVendeTest0() {
         CadenaSupermercado mercado1 = new CadenaSupermercado();
         mercado1.calcularGananaciasSuperMercado();
         assertEquals(1,mercado1.getPosicionTiendaMenosVende());
+    }
+    @Test
+    public void getPosicionTiendaMasVende() {
+        CadenaSupermercado mercado1 = new CadenaSupermercado();
+        mercado1.calcularGananaciasSuperMercado();
+        assertEquals(0,mercado1.getPosicionTiendaMasVende());
     }
 }
