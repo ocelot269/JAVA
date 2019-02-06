@@ -91,4 +91,53 @@ private OutputStream bufferSalida;
             System.out.println("Error al recibir: " + e.getMessage());
         }
     }
+    
+    public void enviar(){
+    String web="#";
+    try {
+        bufferSalida.write(web.getBytes());
+        System.out.println("Enviant: \n\n" + web);
+        bufferSalida.flush();
+    }
+    catch (Exception e){
+        System.out.println("Error al enviar: " + e.getMessage());
+    }
+    
+    }
+    
+    
+    public void cerrar(){
+        try {
+            serverSocket.close();
+            socket.close();
+            bufferEntrada.close();
+            bufferSalida.close();
+        }
+        catch (Exception e){
+            System.out.println("Error al cerrar: " + e.getMessage());
+        }
+     }   
+        
+    public void runServidor (int port){
+        while (true) {
+            try {
+            connectar(port);
+            canals();
+            recibir();
+            enviar();
+        }
+        catch (Exception e) {
+            System.out.println("Error al runServidor: " + e.getMessage());
+        }
+        finally {
+            cerrar();
+        }
+    }
+    }
+    
+    
+    
+    
+    
+    
 }
