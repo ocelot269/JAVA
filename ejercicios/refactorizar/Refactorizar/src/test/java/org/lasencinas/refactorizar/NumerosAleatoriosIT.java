@@ -17,11 +17,20 @@ public class NumerosAleatoriosIT {
     public NumerosAleatoriosIT() {
     }
 
-    /**
-     * Test of main method, of class NumerosAleatorios.
-     */
+    
     @Test
-    public void testMain() {
+    public void numeroAleatoriosListaTest() {
+        NumerosAleatorios lista1 = new NumerosAleatorios ();
+        lista1.numerosAleatoriosLista();
+        lista1.sumarParesImparesLista();
+        lista1.mostrarNumeroParesLista();
     }
     
+//    @Test
+//    public void sumarParesImparesListaTest() {
+//        NumerosAleatorios lista1 = new NumerosAleatorios ();
+//        lista1.numerosAleatoriosLista();
+//        lista1.sumarParesImparesLista();
+//        assertEquals(14, lista1);
+    //}
 }
