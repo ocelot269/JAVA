@@ -37,26 +37,26 @@ public class Cotxox {
 		System.out.println("To: " + carrera.getDestino());
 		System.out.println("Distance: " + carrera.getDistancia());
 
-//		System.out.println("\n#####" + "\t See your Cost: \t" + "#####\n");
-//
-//		System.out.println("Visa: " + carrera.getTarjetaCredito());
-//		System.out.println("From: " + carrera.getOrigen());
-//		System.out.println("To: " + carrera.getDestino());
-//		System.out.println("Distance: " + carrera.getDistancia());
+		System.out.println("\n#####" + "\t See your Cost: \t" + "#####\n");
+
+		System.out.println("Visa: " + carrera.getTarjetaCredito());
+		System.out.println("From: " + carrera.getOrigen());
+		System.out.println("To: " + carrera.getDestino());
+		System.out.println("Distance: " + carrera.getDistancia());
 //		System.out.println("Total: " + carrera.getCosteEsperado() + "€");
-//
-//		System.out.println("\n#####" + "\t Get a ride: Driver: \t" + "#####\n");
-//
-//		/* Necesitamos crear la flota de conductores de donde seleccionar uno
-//		 * para ofrecer el servicio.
-//		 * La flota es un objeto de tipo PoolConductores.
-//		 */
-//
-//		ArrayList<Conductor> poolConductores = new ArrayList<>();
-//		Conductor conductor = null;
-//
-//		// creamos objetos conductor y los metemos en el array
-//
+
+		System.out.println("\n#####" + "\t Get a ride: Driver: \t" + "#####\n");
+
+		/* Necesitamos crear la flota de conductores de donde seleccionar uno
+		 * para ofrecer el servicio.
+		 * La flota es un objeto de tipo PoolConductores.
+		 */
+
+		ArrayList<Conductor> poolConductores = new ArrayList<>();
+		Conductor conductor = null;
+
+		// creamos objetos conductor y los metemos en el array
+
 //		String[] nombres = { "Samantha", "Fox", "Mola" };
 //		for (String nombre : nombres) {
 //			conductor = new Conductor(nombre);

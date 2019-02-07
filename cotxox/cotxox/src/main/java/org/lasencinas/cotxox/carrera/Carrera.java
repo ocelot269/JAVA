@@ -83,6 +83,16 @@ public double getCosteTotal(){
 }
 
 
+public double getPropina(){
+    return this.propina;
+}
+
+
+public void setPropina(double propina) {
+    this.propina+=propina;
+}
+
+
 public void setCosteTotal(double pago){
     this.costeTotal+=pago;
 }
@@ -105,4 +115,12 @@ public void realizarPago(double pago){
     setCosteTotal(pago);
 }
 
+
+public void recibirPropina(double propina){
+    setPropina(propina);
+}
+
+//public void liberarConductor(0) {
+    
+//}
 }
