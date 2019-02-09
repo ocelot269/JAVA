@@ -43,14 +43,19 @@ public class TarifaIT {
     @Test
     public void testGetCosteTotalEsperado() {
     Tarifa tarifa = new Tarifa();
-    assertEquals(5,tarifa.getCosteTotalEsperado(1, 1),0);
+    Carrera carrera=new Carrera("asa");
+    carrera.setDistancia(10);
+    carrera.setTiempoEsperado(10);
+    assertEquals(20.4,tarifa.getCosteTotalEsperado(carrera),0);
     }
     
     @Test
     public void testGetCosteTotalEsperado1() {
     Tarifa tarifa = new Tarifa();
-    Carrera.setDistancia(10.5);
-    assertEquals(204,tarifa.getCosteTotalEsperado(100,100),0);
+    Carrera carrera = new Carrera("hola");
+    carrera.setDistancia(1);
+    carrera.setTiempoEsperado(1);
+    assertEquals(5,tarifa.getCosteTotalEsperado(carrera),0);
     }
     
     @Test
