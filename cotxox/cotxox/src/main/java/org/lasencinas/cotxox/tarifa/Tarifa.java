@@ -23,42 +23,42 @@ public class Tarifa {
     
     
     
-    public double getCosteViajeMillas(){
-       return this.costeViajeMillas;
+    public static double getCosteViajeMillas(){
+       return Tarifa.costeViajeMillas;
     }
     
     
-    public void setCosteViajeMillas(double distancia){
-        this.costeViajeMillas= COSTE_MILLA * distancia;
+    public static void setCosteViajeMillas(double distancia){
+        Tarifa.costeViajeMillas= COSTE_MILLA * distancia;
     }
     
     
-    public double getCosteViajeMinutos(){
-        return this.costeViajeMinutos;
+    public static double getCosteViajeMinutos(){
+        return Tarifa.costeViajeMinutos;
     }
     
     
-    public void setCosteViajeMinutos (double minutos){
-        this.costeViajeMinutos= minutos * COSTE_MINUTO;
+    public static void setCosteViajeMinutos (double minutos){
+        Tarifa.costeViajeMinutos= minutos * COSTE_MINUTO;
     }
     
     
-    public double getCosteTiempo(double minutos) {
+    public static double getCosteTiempo(double minutos) {
         return COSTE_MINUTO * minutos;
     }
     
     
-    public double getPorcentajeComision(){
-        return porcentajeComision;
+    public static double getPorcentajeComision(){
+        return Tarifa.porcentajeComision;
     }
     
     
-    public void setPorcentajeComision(){
-        this.porcentajeComision= (getCosteViajeMillas() + getCosteViajeMinutos()) * 20 /100;
+    public static void setPorcentajeComision(){
+        Tarifa.porcentajeComision= (getCosteViajeMillas() + getCosteViajeMinutos()) * 20 /100;
     }
     
     
-    public double getCosteTotalEsperado(Carrera totalCarrera){
+    public static double getCosteTotalEsperado(Carrera totalCarrera){
             setCosteViajeMillas(totalCarrera.getDistancia());
             setCosteViajeMinutos(totalCarrera.getTiempoEsperado());
             setPorcentajeComision();

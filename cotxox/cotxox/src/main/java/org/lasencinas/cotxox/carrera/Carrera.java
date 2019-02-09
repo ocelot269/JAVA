@@ -75,7 +75,7 @@ public void setDistancia(double distancia){
 }
 
 public double getCosteEsperado(){
-    return getCoste;
+    return Tarifa.getCosteTotalEsperado(this);
 }
     
 
