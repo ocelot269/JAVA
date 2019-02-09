@@ -9,8 +9,8 @@ public class Tarifa {
     private double costeViajeMillas=0;
     private final double COSTE_MINUTO=0.35;
     private double costeViajeMinutos=0;
-    private final double COSTE_MINIMO=5 ;
-    private double porcentajeComision = (costeViajeMillas +  costeViajeMinutos) * 1.20;
+    private final double COSTE_MINIMO_VIAJE=5 ;
+    private double porcentajeComision = 0;
     
     
     
@@ -30,6 +30,7 @@ public class Tarifa {
         this.costeViajeMillas= COSTE_MILLA * distancia;
     }
     
+    
     public double getCosteViajeMinutos(){
         return this.costeViajeMinutos;
     }
@@ -39,13 +40,37 @@ public class Tarifa {
         this.costeViajeMinutos= minutos * COSTE_MINUTO;
     }
     
+    
     public double getCosteTiempo(double minutos) {
         return COSTE_MINUTO * minutos;
     }
     
     
-    public double getCosteTotalEsperado(Kilometros){
-       return costeViajeMillas + costeViajeMinutos;
+    public double getPorcentajeComision(){
+        return porcentajeComision;
+    }
+    
+    
+    public void setPorcentajeComision(){
+        this.porcentajeComision= (getCosteViajeMillas() + getCosteViajeMinutos()) * 20 /100;
+    }
+    
+    
+    public double getCosteTotalEsperado(double millas, double minutos){
+            double TotalViaje;
+            setCosteViajeMillas(millas);
+            setCosteViajeMinutos(minutos);
+            setPorcentajeComision();
+            
+            if (getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos() <6){
+                return TotalViaje =COSTE_MINIMO_VIAJE;
+            }
+            else {
+                return TotalViaje = getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos();
+            }
+            
+            
+        
     }
     
     

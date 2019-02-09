@@ -30,7 +30,27 @@ public class TarifaIT {
     tarifa.setCosteViajeMinutos(10.3);
     assertEquals(3.605,tarifa.getCosteViajeMinutos(),0);
     }
-
+    
+    
+    @Test
+    public void testGetPorcentajeComision() {
+    Tarifa tarifa = new Tarifa();
+    tarifa.setPorcentajeComision();
+    assertEquals(0,tarifa.getPorcentajeComision(),0);
+    }
+    
+    @Test
+    public void testGetCosteTotalEsperado() {
+    Tarifa tarifa = new Tarifa();
+    assertEquals(5,tarifa.getCosteTotalEsperado(1, 1),0);
+    }
+    
+    @Test
+    public void testGetCosteTotalEsperado1() {
+    Tarifa tarifa = new Tarifa();
+    assertEquals(204,tarifa.getCosteTotalEsperado(100,100),0);
+    }
+    
     
     @Test
     public void testGetCosteTiempo() {
