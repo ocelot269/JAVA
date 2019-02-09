@@ -19,21 +19,28 @@ public class CarreraIT {
     @Test
     public void getTarjetaCreditoTest(){
     Carrera carrera=new Carrera("432246754");
-        assertEquals("432246754", carrera.getTarjetaCredito());
+    assertEquals("432246754", carrera.getTarjetaCredito());
     }
     
     @Test
     public void getOrigenTest(){
     Carrera carrera=new Carrera("432246754");
     carrera.setOrigen("magaluf");
-       assertEquals("magaluf", carrera.getOrigen());
+    assertEquals("magaluf", carrera.getOrigen());
     }
     
     @Test
     public void getDestinoTest(){
     Carrera carrera=new Carrera("432246754");
     carrera.setDestino("aeropuerto");
-       assertEquals("aeropuerto", carrera.getDestino());
+    assertEquals("aeropuerto", carrera.getDestino());
+    }
+    
+    @Test
+    public void getDistanciaTest(){
+    Carrera carrera=new Carrera("432246754");
+    carrera.setDistancia(18.1);
+    assertEquals(17.1, carrera.getDistancia(),0);
     }
     
     @Test
