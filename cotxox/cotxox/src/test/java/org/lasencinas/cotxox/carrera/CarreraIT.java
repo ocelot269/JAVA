@@ -17,10 +17,19 @@ public class CarreraIT {
     public CarreraIT() {
     }
     @Test
-    public void getTarjetaCredito(){
+    public void getTarjetaCreditoTest(){
     Carrera carrera=new Carrera("432246754");
         assertEquals("432246754", carrera.getTarjetaCredito());
     }
+    
+    @Test
+    public void getOrigenTest(){
+    Carrera carrera=new Carrera("432246754");
+    carrera.setOrigen("magaluf");
+       assertEquals("maggaluf", carrera.getOrigen());
+    }
+    
+    
     
     @Test
     public void testRealizarPago() {
