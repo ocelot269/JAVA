@@ -40,14 +40,16 @@ public class CarreraIT {
     public void getDistanciaTest(){
     Carrera carrera=new Carrera("432246754");
     carrera.setDistancia(18.1);
-    assertEquals(17.1, carrera.getDistancia(),0);
+    assertEquals(18.1, carrera.getDistancia(),0);
     }
     
+    
+   
     @Test
-    public void testRealizarPago() {
+    public void testGetPropina() {
     Carrera pasajero=new Carrera("43224953");
-    pasajero.realizarPago(425.25);
-    assertEquals(425.25, pasajero.getCosteTotal(),0);
+    pasajero.setPropina(425.25);
+    assertEquals(425.21, pasajero.getPropina(),0);
     
     }
     
