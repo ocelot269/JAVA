@@ -26,10 +26,15 @@ public class CarreraIT {
     public void getOrigenTest(){
     Carrera carrera=new Carrera("432246754");
     carrera.setOrigen("magaluf");
-       assertEquals("maggaluf", carrera.getOrigen());
+       assertEquals("magaluf", carrera.getOrigen());
     }
     
-    
+    @Test
+    public void getDestinoTest(){
+    Carrera carrera=new Carrera("432246754");
+    carrera.setDestino("aeropuerto");
+       assertEquals("aeropuerto", carrera.getDestino());
+    }
     
     @Test
     public void testRealizarPago() {
