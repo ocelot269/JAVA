@@ -2,9 +2,14 @@
 package org.lasencinas.cotxox.carrera;
 
 import org.lasencinas.cotxox.conductores.PoolConductores;
+import org.lasencinas.cotxox.tarifa.Tarifa;
 
 
 public class Carrera {
+
+    static double getTiempoEsperado(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
 //-----------------------Iniciando variables----------------------------//
@@ -13,7 +18,7 @@ public class Carrera {
     private String origen=null;
     private String destino=null;
     private double distancia=0;
-    private int tiempoEsperado =0;
+    private double tiempoEsperado =0;
     private int tiempoCarrera = 0;
     private double propina=0;
     private double costeTotal = 0;
@@ -69,8 +74,8 @@ public void setDistancia(double distancia){
     this.distancia=distancia;
 }
 
-//public double getCosteEsperado(Tarifa getCosteTotalEsperado()){
-//    return Tarifa.getCosteTotalEsperado() ;
+//public double getCosteEsperado(double millas, double minutos){
+//    return Tarifa.getCosteTotalEsperado(double millas , double minutos);
 //}
     
 
@@ -98,8 +103,12 @@ public void setCosteTotal(double pago){
 }
 
 
-public void setTiempoEsperado (int tiempo){
-    this.tiempoEsperado+=tiempo;
+public void setTiempoEsperado (double tiempo){
+    this.tiempoEsperado=tiempo;
+}
+
+public double getTiempoEsperado() {
+      return this.tiempoEsperado;
 }
 
 

@@ -54,6 +54,15 @@ public class CarreraIT {
     assertEquals(425.25, pasajero.getPropina(),0);
     
     }
+    
+    
+    @Test
+    public void testGetTiempoEsperado() {
+    Carrera pasajero = new Carrera("145545464");
+    pasajero.setTiempoEsperado(10.5);
+    assertEquals(10.5,pasajero.getTiempoEsperado(),0);
+    }
+    
 //----------------------------Fin Getters y Setters Test--------------------------------------//    
     @Test
     public void testRecibirPropina() {

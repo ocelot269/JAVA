@@ -7,6 +7,7 @@ package org.lasencinas.cotxox.tarifa;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.lasencinas.cotxox.carrera.Carrera;
 
 /**
  *
@@ -48,12 +49,12 @@ public class TarifaIT {
     @Test
     public void testGetCosteTotalEsperado1() {
     Tarifa tarifa = new Tarifa();
+    Carrera.setDistancia(10.5);
     assertEquals(204,tarifa.getCosteTotalEsperado(100,100),0);
     }
     
-    
     @Test
-    public void testGetCosteTiempo() {
+    public void testGetTiempoEsperado() {
     Tarifa tarifa = new Tarifa();
     assertEquals(3.5,tarifa.getCosteTiempo(10),0);
     }

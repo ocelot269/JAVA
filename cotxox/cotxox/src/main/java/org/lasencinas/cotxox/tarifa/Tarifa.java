@@ -1,6 +1,8 @@
 
 package org.lasencinas.cotxox.tarifa;
 
+import org.lasencinas.cotxox.carrera.Carrera;
+
 
 public class Tarifa {
     
@@ -56,10 +58,10 @@ public class Tarifa {
     }
     
     
-    public double getCosteTotalEsperado(double millas, double minutos){
+    public double getCosteTotalEsperado(Carrera totalCarrera){
             double TotalViaje;
-            setCosteViajeMillas(millas);
-            setCosteViajeMinutos(minutos);
+            setCosteViajeMillas(totalCarrera.getDistancia());
+            setCosteViajeMinutos(totalCarrera.getTiempoEsperado());
             setPorcentajeComision();
             
             if (getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos() <6){
