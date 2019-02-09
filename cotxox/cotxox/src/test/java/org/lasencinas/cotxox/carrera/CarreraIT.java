@@ -16,7 +16,11 @@ public class CarreraIT {
     
     public CarreraIT() {
     }
-    
+    @Test
+    public void getTarjetaCredito(){
+    Carrera carrera=new Carrera("432246754");
+        assertEquals("432246754", carrera.getTarjetaCredito());
+    }
     
     @Test
     public void testRealizarPago() {

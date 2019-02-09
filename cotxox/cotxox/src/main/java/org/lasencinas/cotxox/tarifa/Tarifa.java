@@ -10,7 +10,7 @@ public class Tarifa {
     private final double COSTE_MINUTO=0.35;
     private double costeViajeMinutos=0;
     private final double COSTE_MINIMO=5 ;
-    private double porcentajeComision= (COSTE_MILLA + COSTE_MINUTO) *1.20;
+    private double porcentajeComision = (costeViajeMillas +  costeViajeMinutos) * 1.20;
     
     
     
@@ -31,8 +31,8 @@ public class Tarifa {
     }
     
     
-    public double getCosteTotalEsperado(Carrera){
-        
+    public double getCosteTotalEsperado(Carrera ){
+       return costeViajeMillas + costeViajeMinutos;
     }
     
     
