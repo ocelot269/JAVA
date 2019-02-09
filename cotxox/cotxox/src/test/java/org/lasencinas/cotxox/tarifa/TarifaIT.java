@@ -18,11 +18,19 @@ public class TarifaIT {
     }
 
     @Test
-    public void testGetCosteDistancia() {
+    public void testGetCosteViajeMillas() {
     Tarifa tarifa = new Tarifa();
-    assertEquals(13.5,tarifa.getCosteDistancia(10),0);
+    tarifa.setCosteViajeMillas(20.3);
+    assertEquals(27.405,tarifa.getCosteViajeMillas(),0);
     }
     
+    @Test
+    public void testGetCosteViajeMinutos() {
+    Tarifa tarifa = new Tarifa();
+    tarifa.setCosteViajeMinutos(10.3);
+    assertEquals(3.605,tarifa.getCosteViajeMinutos(),0);
+    }
+
     
     @Test
     public void testGetCosteTiempo() {

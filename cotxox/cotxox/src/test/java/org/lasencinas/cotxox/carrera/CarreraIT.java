@@ -13,7 +13,9 @@ import static org.junit.Assert.*;
  * @author ozeh
  */
 public class CarreraIT {
+  
     
+    //-----------------------------------Getters y Setters Test-------------------------------//
     public CarreraIT() {
     }
     @Test
@@ -49,10 +51,10 @@ public class CarreraIT {
     public void testGetPropina() {
     Carrera pasajero=new Carrera("43224953");
     pasajero.setPropina(425.25);
-    assertEquals(425.21, pasajero.getPropina(),0);
+    assertEquals(425.25, pasajero.getPropina(),0);
     
     }
-    
+//----------------------------Fin Getters y Setters Test--------------------------------------//    
     @Test
     public void testRecibirPropina() {
     Carrera pasajero=new Carrera("43224953");

@@ -21,17 +21,30 @@ public class Tarifa {
     
     
     
-    public double getCosteDistancia(double distancia){
-       return costeViajeMillas = COSTE_MILLA * distancia; 
+    public double getCosteViajeMillas(){
+       return this.costeViajeMillas;
     }
     
+    
+    public void setCosteViajeMillas(double distancia){
+        this.costeViajeMillas= COSTE_MILLA * distancia;
+    }
+    
+    public double getCosteViajeMinutos(){
+        return this.costeViajeMinutos;
+    }
+    
+    
+    public void setCosteViajeMinutos (double minutos){
+        this.costeViajeMinutos= minutos * COSTE_MINUTO;
+    }
     
     public double getCosteTiempo(double minutos) {
-        return costeViajeMinutos=COSTE_MINUTO * minutos;
+        return COSTE_MINUTO * minutos;
     }
     
     
-    public double getCosteTotalEsperado(Carrera ){
+    public double getCosteTotalEsperado(Kilometros){
        return costeViajeMillas + costeViajeMinutos;
     }
     
