@@ -37,7 +37,7 @@ public class TarifaIT {
     public void testGetPorcentajeComision() {
     Tarifa tarifa = new Tarifa();
     tarifa.setPorcentajeComision();
-    assertEquals(0,tarifa.getPorcentajeComision(),0);
+    assertEquals(0,tarifa.getPorcentajeComision(),1);
     }
     
     @Test

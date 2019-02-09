@@ -7,12 +7,12 @@ import org.lasencinas.cotxox.carrera.Carrera;
 public class Tarifa {
     
     
-    private final double COSTE_MILLA=1.35;
-    private double costeViajeMillas=0;
-    private final double COSTE_MINUTO=0.35;
-    private double costeViajeMinutos=0;
-    private final double COSTE_MINIMO_VIAJE=5 ;
-    private double porcentajeComision = 0;
+    private final static double COSTE_MILLA=1.35;
+    private static double costeViajeMillas=0;
+    private static final double COSTE_MINUTO=0.35;
+    private static double costeViajeMinutos=0;
+    private static final double COSTE_MINIMO_VIAJE=5 ;
+    private static double porcentajeComision = 0;
     
     
     
@@ -59,16 +59,17 @@ public class Tarifa {
     
     
     public double getCosteTotalEsperado(Carrera totalCarrera){
-            double TotalViaje;
             setCosteViajeMillas(totalCarrera.getDistancia());
             setCosteViajeMinutos(totalCarrera.getTiempoEsperado());
             setPorcentajeComision();
             
             if (getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos() <6){
-                return TotalViaje =COSTE_MINIMO_VIAJE;
+                totalCarrera.setCosteTotal(COSTE_MINIMO_VIAJE);
+                return totalCarrera.getCosteTotal();
             }
             else {
-                return TotalViaje = getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos();
+                totalCarrera.setCosteTotal(getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos());
+                return totalCarrera.getCosteTotal();
             }
             
             

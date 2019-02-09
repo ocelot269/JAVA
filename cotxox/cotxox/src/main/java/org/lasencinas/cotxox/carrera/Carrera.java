@@ -74,9 +74,9 @@ public void setDistancia(double distancia){
     this.distancia=distancia;
 }
 
-//public double getCosteEsperado(double millas, double minutos){
-//    return Tarifa.getCosteTotalEsperado(double millas , double minutos);
-//}
+public double getCosteEsperado(){
+    return getCoste;
+}
     
 
 //public String [] asignarConductor(PoolConductores conductores){

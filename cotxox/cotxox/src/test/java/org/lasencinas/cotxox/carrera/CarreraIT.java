@@ -63,6 +63,9 @@ public class CarreraIT {
     assertEquals(10.5,pasajero.getTiempoEsperado(),0);
     }
     
+    
+    
+    
 //----------------------------Fin Getters y Setters Test--------------------------------------//    
     @Test
     public void testRecibirPropina() {
