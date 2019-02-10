@@ -20,7 +20,14 @@ public class ConductorIT {
     @Test
     public void testGetNombre() {
     Conductor FernandoAlonso = new Conductor("fernando");
-    assertEquals("Fernando",FernandoAlonso.getNombre());
+    assertEquals("fernando",FernandoAlonso.getNombre());
+    }
+    
+     @Test
+    public void testGetMatricula() {
+    Conductor FernandoAlonso = new Conductor("fernando");
+    FernandoAlonso.setMatricula("CSY4232Y");
+    assertEquals("CSY4232Y",FernandoAlonso.getMatricula());
     }
     
 }

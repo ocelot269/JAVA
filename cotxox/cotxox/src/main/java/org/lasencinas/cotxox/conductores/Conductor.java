@@ -47,6 +47,16 @@ public class Conductor {
 public String getNombre(){
     return this.nombre;
 }
+
+
+public String getMatricula(){
+    return this.matricula;
+}
+
+
+public void  setMatricula(String matricula){
+    this.matricula=matricula;
+}
 //-------------------------Fin Getters and Setters------------------------------------//
    
    
