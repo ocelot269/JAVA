@@ -14,7 +14,7 @@ public class Conductor {
    private String matricula;
    private double valoracionesMedia=0d;
    private ArrayList<Double>valoraciones= new ArrayList<>();
-   private boolean ocupado=false;
+   private boolean conductorLibre=false;
    
    
 //------------------------------Fin variables------------------------------------------//   
@@ -89,6 +89,14 @@ public void setValoraciones(double valoracion){
 }
 
 
+public boolean getConductorLibre(){
+    return this.conductorLibre;
+}
+
+
+public void setConductorLibre(boolean ocupado){
+    this.conductorLibre=ocupado;
+}
 //-------------------------Fin Getters and Setters------------------------------------//
  
 
