@@ -78,7 +78,14 @@ public void setValoracionesMedia(double puntuacion){
 }
 
 
+public int getNumeroValoraciones(){
+    return valoraciones.size();
+}
 
+
+public void setValoraciones(double valoracion){
+    valoraciones.add(valoracion);
+}
 
 
 //-------------------------Fin Getters and Setters------------------------------------//

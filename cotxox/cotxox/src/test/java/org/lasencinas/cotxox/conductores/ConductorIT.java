@@ -44,4 +44,12 @@ public class ConductorIT {
     FernandoAlonso.setValoracionesMedia(3.5);
     assertEquals(3.5,FernandoAlonso.getValoracionesMedia(),0);
     }
+    
+    
+     @Test
+    public void testGetValoraciones() {
+    Conductor FernandoAlonso = new Conductor("fernando");
+    FernandoAlonso.setValoraciones((double)3.5);
+    assertEquals( 1,FernandoAlonso.getNumeroValoraciones(),0.1);
+    }
 }
