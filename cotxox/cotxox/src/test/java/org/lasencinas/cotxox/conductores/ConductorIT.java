@@ -37,4 +37,11 @@ public class ConductorIT {
     FernandoAlonso.setModelo("peugeot 206 sport");
     assertEquals("peugeot 206 sport",FernandoAlonso.getModelo());
     }
+    
+     @Test
+    public void testGetValoracionesMedia() {
+    Conductor FernandoAlonso = new Conductor("fernando");
+    FernandoAlonso.setValoracionesMedia(3.5);
+    assertEquals(3.5,FernandoAlonso.getValoracionesMedia(),0);
+    }
 }

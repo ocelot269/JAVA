@@ -67,6 +67,20 @@ public String getModelo(){
 public void setModelo (String modelo){
     this.modelo=modelo;
 }
+
+public double getValoracionesMedia(){
+    return this.valoracionesMedia;
+}
+
+
+public void setValoracionesMedia(double puntuacion){
+    this.valoracionesMedia=puntuacion;
+}
+
+
+
+
+
 //-------------------------Fin Getters and Setters------------------------------------//
    
    
