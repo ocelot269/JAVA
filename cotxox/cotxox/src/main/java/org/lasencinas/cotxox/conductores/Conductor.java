@@ -57,6 +57,16 @@ public String getMatricula(){
 public void  setMatricula(String matricula){
     this.matricula=matricula;
 }
+
+
+public String getModelo(){
+    return this.modelo;
+}
+
+
+public void setModelo (String modelo){
+    this.modelo=modelo;
+}
 //-------------------------Fin Getters and Setters------------------------------------//
    
    

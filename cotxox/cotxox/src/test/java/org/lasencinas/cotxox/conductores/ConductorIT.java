@@ -30,4 +30,11 @@ public class ConductorIT {
     assertEquals("CSY4232Y",FernandoAlonso.getMatricula());
     }
     
+    
+     @Test
+    public void testGetModelo() {
+    Conductor FernandoAlonso = new Conductor("fernando");
+    FernandoAlonso.setModelo("peugeot 206 sport");
+    assertEquals("peugeot 206 sport",FernandoAlonso.getModelo());
+    }
 }
