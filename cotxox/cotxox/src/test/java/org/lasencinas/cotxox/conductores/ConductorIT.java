@@ -18,7 +18,9 @@ public class ConductorIT {
     }
 
     @Test
-    public void testSomeMethod() {
+    public void testGetNombre() {
+    Conductor FernandoAlonso = new Conductor("fernando");
+    assertEquals("Fernando",FernandoAlonso.getNombre());
     }
     
 }

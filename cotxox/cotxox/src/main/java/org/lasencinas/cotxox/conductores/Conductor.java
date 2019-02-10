@@ -41,9 +41,13 @@ public class Conductor {
    
 //---------------------------------Fin Inicio Constructor--------------------------------//
    
+
+//-------------------------Inicio Getters and Setters------------------------------------//
    
-   
-   
+public String getNombre(){
+    return this.nombre;
+}
+//-------------------------Fin Getters and Setters------------------------------------//
    
    
    
