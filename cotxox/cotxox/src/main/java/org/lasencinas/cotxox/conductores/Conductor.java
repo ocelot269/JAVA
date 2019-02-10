@@ -79,18 +79,35 @@ public void setValoracionesMedia(double puntuacion){
 
 
 public int getNumeroValoraciones(){
-    return valoraciones.size();
+    return this.valoraciones.size();
 }
 
 
 public void setValoraciones(double valoracion){
-    valoraciones.add(valoracion);
+    this.valoraciones.add(valoracion);
+    calcularMediaValoracionesConductor();
 }
 
 
 //-------------------------Fin Getters and Setters------------------------------------//
-   
-   
+ 
+
+
+//-------------------------Inicio Logica---------------------------------------------//
+
+
+
+public double calcularMediaValoracionesConductor(){
+    double media=0;
+    for (double valoracion : valoraciones){
+        media+= valoracion; 
+    }
+    return valoracionesMedia = media / getNumeroValoraciones();
+}
+
+
+//--------------------------Fin logica----------------------------------------------//
+
    
    
    

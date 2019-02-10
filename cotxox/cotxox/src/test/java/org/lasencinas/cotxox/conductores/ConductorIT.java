@@ -47,9 +47,21 @@ public class ConductorIT {
     
     
      @Test
-    public void testGetValoraciones() {
+    public void testGetValoracionesX() {
     Conductor FernandoAlonso = new Conductor("fernando");
-    FernandoAlonso.setValoraciones((double)3.5);
-    assertEquals( 1,FernandoAlonso.getNumeroValoraciones(),0.1);
+    FernandoAlonso.setValoraciones((double)5);
+    FernandoAlonso.setValoraciones((double)3);
+    assertEquals( 2,FernandoAlonso.getNumeroValoraciones(),0.1);
+    assertEquals(4, FernandoAlonso.getValoracionesMedia(),0);
+    }
+    
+     @Test
+    public void testGetValoraciones2() {
+    Conductor FernandoAlonso = new Conductor("fernando");
+    FernandoAlonso.setValoraciones((double)9);
+    FernandoAlonso.setValoraciones((double)3);
+    FernandoAlonso.setValoraciones((double)1);
+    assertEquals( 3,FernandoAlonso.getNumeroValoraciones(),0.1);
+    assertEquals(4.33, FernandoAlonso.getValoracionesMedia(),0.1);
     }
 }
