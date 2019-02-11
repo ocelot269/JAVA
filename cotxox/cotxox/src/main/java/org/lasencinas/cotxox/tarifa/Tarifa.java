@@ -63,7 +63,7 @@ public class Tarifa {
             setCosteViajeMinutos(totalCarrera.getTiempoEsperado());
             setPorcentajeComision();
             
-            if (getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos() <6){
+            if (getPorcentajeComision() + getCosteViajeMillas() + getCosteViajeMinutos() <= 5){
                 totalCarrera.setCosteTotal(COSTE_MINIMO_VIAJE);
                 return totalCarrera.getCosteTotal();
             }
