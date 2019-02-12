@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 
 public class ServidorWeb {
@@ -134,7 +135,17 @@ private OutputStream bufferSalida;
         }
     }
     }
-    
+      public static void main( String[] args ){
+        Scanner teclat = new Scanner (System.in);
+        ServidorWeb s = new ServidorWeb();
+        System.out.println("Introdueix el port:  ");
+        int port = teclat.nextInt();
+        teclat.close();
+        while(true){
+            s.runServidor(port);
+        } 
+        
+    }
     
     
     
