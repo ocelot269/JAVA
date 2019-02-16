@@ -7,6 +7,7 @@ package org.lasencinas.cotxox.carrera;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.lasencinas.cotxox.conductores.Conductor;
 
 /**
  *
@@ -62,8 +63,14 @@ public class CarreraIT {
     pasajero.setTiempoEsperado(10.5);
     assertEquals(10.5,pasajero.getTiempoEsperado(),0);
     }
-    
-    
+   
+    @Test
+    public void testGetConductor() {
+    Carrera pasajero = new Carrera("145545464");
+    Conductor conductor =new Conductor("Luisa");
+    pasajero.setConductor(conductor);
+    assertEquals("Luisa",pasajero.getConductor().getNombre());
+    }  
     
     
 //----------------------------Fin Getters y Setters Test--------------------------------------//    

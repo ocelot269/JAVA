@@ -1,15 +1,13 @@
 
 package org.lasencinas.cotxox.carrera;
 
+import org.lasencinas.cotxox.conductores.Conductor;
 import org.lasencinas.cotxox.conductores.PoolConductores;
 import org.lasencinas.cotxox.tarifa.Tarifa;
 
 
 public class Carrera {
 
-    static double getTiempoEsperado(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
 //-----------------------Iniciando variables----------------------------//
@@ -22,9 +20,8 @@ public class Carrera {
     private int tiempoCarrera = 0;
     private double propina=0;
     private double costeTotal = 0;
-    private String conductor= null;
     private int pago= 0;
-//    private Conductor conductor=null;
+    private Conductor conductor=null;
     
 //-------------------------Fin variables---------------------------------//    
     
@@ -79,6 +76,14 @@ public double getCosteEsperado(){
 }
     
 
+public Conductor getConductor(){
+    return conductor;
+}
+
+
+public void setConductor(Conductor conductor){
+  this.conductor= conductor;
+}
 //public String [] asignarConductor(PoolConductores conductores){
 //    return this.conductor=conductores;
 //}
@@ -129,7 +134,15 @@ public void recibirPropina(double propina){
     setPropina(propina);
 }
 
-//public void liberarConductor(0) {
-    
-//}
+
+public void asignarConductor (PoolConductores conductor){
+    setConductor(conductor.asignarConductor());
+}
+
+
+public void liberarConductor() {
+    getConductor().setConductorLibre(true);
+ }
+
+
 }
