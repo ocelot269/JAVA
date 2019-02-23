@@ -9,6 +9,8 @@ public class Address {
     //Variables
     private PublicKey PK=null;
     private PrivateKey SK=null;
+    private double balance = 0d;
+    private String symbol ="EZI";
     
     //Constructor
     
@@ -38,6 +40,23 @@ public class Address {
         this.SK = SK;
     }
     
+    
+    
+    public double getBalance() {
+        return balance;
+    }
+
+    
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+   
+    public String getSymbol() {
+        return symbol;
+    }    
+    
+    
     //metodos
       public void generateKeyPair(){
     KeyPair pair = GenSig.generateKeyPair();
@@ -45,5 +64,13 @@ public class Address {
     setPK(pair.getPublic());
     }
 
+    @Override
+    public String toString() {
+        return "\n" + "PK = " + getPK().hashCode() + "\n" + "Balance = " + getBalance() + " " + getSymbol(); 
+    }
+
+   
+      
+   
     
 }

@@ -37,4 +37,16 @@ public class AddressIT {
         assertNotNull(address.getSK());
     }
     
+    @Test
+    public void testGetBalance() {
+    Address direccion = new Address();
+    direccion.setBalance(100d);
+    assertEquals(100d,direccion.getBalance(),0);
+    }
+   
+    @Test
+    public void testSymbol() {
+    Address direccion = new Address();
+    assertEquals("EZI",direccion.getSymbol());
+    }
 }
