@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.lasencinas.enzinium;
 
-package enzinium;
 
 /**
  * Contratos inteligentes con enZinium.
@@ -37,23 +32,23 @@ public class App {
         Address rick = new Address();
         rick.generateKeyPair();
 
-//        /**
-//         * Visualiza la direccion publica de Rick y su balance
-//         * 
-//         * Utiliza el metodo hashCode() de PublicKey para 
-//         * mostrar la PublicKey en consola 
-//         */
-//        
-//        System.out.println("\n" + "Address de Rick" + "\n" + 
-//                                  "==============="        );
-//        System.out.println(rick.toString());
-//
-//        /**
-//         * Creamos una Address en nuestro sistema para Morty
-//         * y otra para Jen y visualizamos su direccion puvlica
-//         * y balance
-//         */
-//        
+        /**
+         * Visualiza la direccion publica de Rick y su balance
+         * 
+         * Utiliza el metodo hashCode() de PublicKey para 
+         * mostrar la PublicKey en consola 
+         */
+        
+        System.out.println("\n" + "Address de Rick" + "\n" + 
+                                  "==============="        );
+        System.out.println(rick.toString());
+
+        /**
+         * Creamos una Address en nuestro sistema para Morty
+         * y otra para Jen y visualizamos su direccion puvlica
+         * y balance
+         */
+        
 //        Address morty = new Address();
 //        morty.generateKeyPair();
 //
