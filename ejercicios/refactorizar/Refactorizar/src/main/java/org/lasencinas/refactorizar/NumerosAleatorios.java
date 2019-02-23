@@ -18,12 +18,21 @@ public class NumerosAleatorios {
      public static void main(String[] args) {
          
      }    
+
+//-----------------------Inicio Constructor----------------------------------//     
+    
      
+     public NumerosAleatorios() {
+
+    }
+
+//------------------------Fin Constructor-----------------------------------//
+
      
-//-------------------Inicializando el variables---------------------------//
+//-------------------Inicializando el variables------------------------------//
 
 
-    private int[] lista = new int[25];
+    private int[] listaNumerosAleatorio = new int[25];
     private Random aleatorio = new Random();
     private double[] auxiliar = new double[4];
     private int sumaImpares = 0;
@@ -40,7 +49,7 @@ public class NumerosAleatorios {
     
     
     public int[] getListaNumAleatorios() {
-         return this.lista;
+         return this.listaNumerosAleatorio;
     }
     
     
@@ -70,6 +79,10 @@ public class NumerosAleatorios {
     //----------------------------Setters-----------------------------------//
     
     
+    public void setAñadirLista(int posicion, int dato){
+        listaNumerosAleatorio[posicion]= dato;
+    }
+        
     
     //----------------------------Final Setters------------------------------//
     
@@ -82,15 +95,15 @@ public class NumerosAleatorios {
         
         
         public void numerosAleatoriosLista () {
-            for (int i = 0; i < lista.length; i++) { //Creando la lista con numeros del 25 al 50,al azar
-                lista[i] = aleatorio.nextInt(26) + 25;
+            for (int i = 0; i < listaNumerosAleatorio.length; i++) { //Creando la lista con numeros del 25 al 50,al azar
+                setAñadirLista(i, aleatorio.nextInt(26) + 25);
             }
         }
 
         
         public void sumarParesImparesLista() {
-            for (int i = 0; i < lista.length; i++) {
-                if (lista[i] % 2 == 0) {
+            for (int i = 0; i < listaNumerosAleatorio.length; i++) {
+                if (listaNumerosAleatorio[i] % 2 == 0) {
                     auxiliar[0]++;
                 } else {
                     auxiliar[1]++;
@@ -101,12 +114,12 @@ public class NumerosAleatorios {
         
         
         public void numeroMinimoLista() {
-            for (int i= 0; i < lista.length; i++) {
+            for (int i= 0; i < listaNumerosAleatorio.length; i++) {
                 if (i == 0) {
-                    min = lista[i];
+                    min = listaNumerosAleatorio[i];
                 } 
-                else if (lista[i] < min) {
-                    min = lista[i];
+                else if (listaNumerosAleatorio[i] < min) {
+                    min = listaNumerosAleatorio[i];
                 }
             }
         } 
@@ -134,8 +147,8 @@ public class NumerosAleatorios {
         
         
        public void MostrarElementosLista () {
-            for (int i = 0; i < lista.length; i++) {
-                System.out.println("Posicion " + i + " de la lista =" + lista[i]);
+            for (int i = 0; i < listaNumerosAleatorio.length; i++) {
+                System.out.println("Posicion " + i + " de la lista =" + listaNumerosAleatorio[i]);
             }
        }
        
