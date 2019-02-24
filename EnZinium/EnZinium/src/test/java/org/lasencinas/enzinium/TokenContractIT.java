@@ -38,7 +38,7 @@ public class TokenContractIT {
     @Test
     public void testGetTotalSupply() {
     token.setTotalSupply(100d);
-    assertEquals(100d, token.getTotalSupply(),0);
+    assertEquals(100d, token.totalSupply(),0);
     }
 
     
@@ -48,5 +48,25 @@ public class TokenContractIT {
     TokenContract token1 = new TokenContract(address);    
     assertNotNull(token1.getPK());
     }
-
+    
+    @Test
+    public void testAddOwner(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    token1.addOwner(address.getPK(), 100d);
+    assertEquals(1, token1.getBalances().size());
+    
+    }
+    
+    @Test
+    public void testAddOwner1(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    token1.addOwner(address.getPK(), 100d);
+    token1.addOwner(address.getPK(), 500d);
+    assertEquals(100d, token1.getBalances().get(address.getPK()),0);
+    
+    
+    
+    }
 }
