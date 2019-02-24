@@ -49,4 +49,11 @@ public class AddressIT {
     Address direccion = new Address();
     assertEquals("EZI",direccion.getSymbol());
     }
+    
+    @Test
+    public void testAddEZI() {
+    Address direccion = new Address();
+    direccion.addEZI(20d);
+    assertEquals(20d,direccion.getBalance(),0);
+    }
 }

@@ -241,38 +241,38 @@ public class App {
                                   "===================="        );
         ricknillos.owners();
         
-//        /**
-//         * Calcula el numero de asistentes al concierto (excluyendo a Rick),
-//         * es decir, el numero de entradas vendidas.
-//         * 
-//         * totalTokensSold()
-//         * @return numero de tokens (entradas) vendidos
-//         */
-//
-//        System.out.println("\n" + "Total de asistentes: " 
-//                                    + ricknillos.totalTokensSold() + "\n");
-//
-//        
-//        /**
-//         * AHORA A POR EL EXCEL·LENT !!
-//         * CAN DO !!
-//         */
-//
-//        /**
-//         * Vamos a comprar entradas con nuestra moneda enZinium.
-//         * 
-//         * Añade 20 enZiniums a la direccion de Morty:
-//         * 
-//         * addEZI()
-//         * @param cantidad de enziniums
-//         */
-//
-//        morty.addEZI(20d);
-//
-//        System.out.println("\n" + "Recarga eZis de Morty" + "\n" + 
-//                                  "====================="        );
-//        System.out.println(morty.toString());
-//
+        /**
+         * Calcula el numero de asistentes al concierto (excluyendo a Rick),
+         * es decir, el numero de entradas vendidas.
+         * 
+         * totalTokensSold()
+         * @return numero de tokens (entradas) vendidos
+         */
+
+        System.out.println("\n" + "Total de asistentes: " 
+                                    + ricknillos.totalTokensSold() + "\n");
+
+        
+        /**
+         * AHORA A POR EL EXCEL·LENT !!
+         * CAN DO !!
+         */
+
+        /**
+         * Vamos a comprar entradas con nuestra moneda enZinium.
+         * 
+         * Añade 20 enZiniums a la direccion de Morty:
+         * 
+         * addEZI()
+         * @param cantidad de enziniums
+         */
+
+        morty.addEZI(20d);
+
+        System.out.println("\n" + "Recarga eZis de Morty" + "\n" + 
+                                  "====================="        );
+        System.out.println(morty.toString());
+
 //        /** 
 //         * Morty Compra 2 entradas a 5 enZiniums cada una:
 //         * envia una transferencia al contrato de ricknillo 

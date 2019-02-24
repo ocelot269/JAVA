@@ -70,7 +70,10 @@ public class Address {
     }
 
    
-      
+
+    public void addEZI (double enziniums){
+        balance+=enziniums;
+    }
    
     
 }

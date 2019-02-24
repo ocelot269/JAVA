@@ -128,16 +128,26 @@ public class TokenContract {
        //      System.out.println("Propietario = " + propietario.hashCode() + " tiene " + tokens + " entradas."));
        for (Map.Entry<PublicKey, Double> propietario : getBalances().entrySet()) {
            if (propietario.getKey()!=getPK()){
-             System.out.println("Propietario = " + propietario.getKey().hashCode() + " tiene " + propietario.getValue() + " entradas.");  
+             System.out.println("Owner : " + propietario.getKey().hashCode() + " " + propietario.getValue() + " " + symbol());  
            }
            else {
                
-           }
-           
+           }  
        } 
     }
     
-    
+    public Double totalTokensSold(){
+        double entradasTotales=0d;
+      for (Map.Entry<PublicKey, Double> propietario : getBalances().entrySet()) {
+           if (propietario.getKey()!=getPK()){
+              entradasTotales+=propietario.getValue();
+           }
+           else {
+                ;
+           }  
+       }  
+      return entradasTotales;
+    }
     
     public void require(boolean condicion)throws  Exception{
        if (condicion){

@@ -139,5 +139,5 @@ public class TokenContractIT {
     assertEquals(0d, token1.balanceOf(morti.getPK()), 0);
     }
     
-    
+
 }
