@@ -227,20 +227,20 @@ public class App {
                                 + ricknillos.symbol());
 
         /**
-//         * Llega el dia del concierto y Rick quiere
-//         * controlar el acceso a la sala de conciertos.
-//         * Muestra una lista de compradores con el número de entradas
-//         * que han adquirido (excluyendo a Rick).
-//         * 
-//         * owners()
-//         * @return muestra en consola la PublicKey de los compradores
-//         *         y el numero de tokens que han adquirido
-//         */
-//
-//        System.out.println("\n" + "Lista de compradores" + "\n" + 
-//                                  "===================="        );
-//        ricknillos.owners();
-//        
+         * Llega el dia del concierto y Rick quiere
+         * controlar el acceso a la sala de conciertos.
+         * Muestra una lista de compradores con el número de entradas
+         * que han adquirido (excluyendo a Rick).
+         * 
+         * owners()
+         * @return muestra en consola la PublicKey de los compradores
+         *         y el numero de tokens que han adquirido
+         */
+
+        System.out.println("\n" + "Lista de compradores" + "\n" + 
+                                  "===================="        );
+        ricknillos.owners();
+        
 //        /**
 //         * Calcula el numero de asistentes al concierto (excluyendo a Rick),
 //         * es decir, el numero de entradas vendidas.

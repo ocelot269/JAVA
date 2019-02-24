@@ -122,6 +122,22 @@ public class TokenContract {
         }
     }
     
+    public void owners(){
+        
+       //getBalances().forEach((propietario,tokens) -> 
+       //      System.out.println("Propietario = " + propietario.hashCode() + " tiene " + tokens + " entradas."));
+       for (Map.Entry<PublicKey, Double> propietario : getBalances().entrySet()) {
+           if (propietario.getKey()!=getPK()){
+             System.out.println("Propietario = " + propietario.getKey().hashCode() + " tiene " + propietario.getValue() + " entradas.");  
+           }
+           else {
+               
+           }
+           
+       } 
+    }
+    
+    
     
     public void require(boolean condicion)throws  Exception{
        if (condicion){

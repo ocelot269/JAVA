@@ -128,4 +128,16 @@ public class TokenContractIT {
     token1.transfer(address.getPK(),morti.getPK(), 1d);
     assertEquals(1d, token1.balanceOf(morti.getPK()), 0);
     }
+    @Test
+    public void testTransfer3(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    Address rick = new Address();
+    token1.addOwner(address.getPK(), 100d);
+    Address morti = new Address();
+    token1.transfer(address.getPK(),morti.getPK(), 300d);
+    assertEquals(0d, token1.balanceOf(morti.getPK()), 0);
+    }
+    
+    
 }
