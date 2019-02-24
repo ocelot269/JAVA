@@ -95,4 +95,26 @@ public class TokenContractIT {
     token1.addOwner(address.getPK(), 100d);
     assertEquals(100d, token1.balanceOf(address.getPK()), 0);
     }
+    
+    @Test
+    public void testTransfer(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    Address rick = new Address();
+    token1.addOwner(address.getPK(), 100d);
+    Address morti = new Address();
+    token1.transfer(morti.getPK(), 3d);
+    assertEquals(97, token1.balanceOf(address.getPK()), 0);
+    }
+    
+    @Test
+    public void testTransfer1(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    Address rick = new Address();
+    token1.addOwner(address.getPK(), 100d);
+    Address morti = new Address();
+    token1.transfer(morti.getPK(), 300d);
+    assertEquals(100d, token1.balanceOf(address.getPK()), 0);
+    }
 }

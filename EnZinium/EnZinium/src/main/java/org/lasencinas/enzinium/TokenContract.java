@@ -86,11 +86,11 @@ public class TokenContract {
         getBalances().putIfAbsent(PK, unidades);
     }
 
-    public int numOwners(){
+    public int numOwners(){         //Este metodo te dice el numero de propietarios hay en el mapa
         return getBalances().size();
     }
     
-    public Double balanceOf(PublicKey pk){
+    public Double balanceOf(PublicKey pk){  //Este metodo te comprueba cuantas entradas tiene cada propietario, y en el caso de ser null , te las muestra como 0.0
         if (getBalances().get(pk)==null){
             return 0d;
         }
@@ -98,7 +98,26 @@ public class TokenContract {
            return getBalances().get(pk);
         }
         
-        
     }
     
+    public void transfer(PublicKey pk,Double tokens) {
+        try {
+        require(balanceOf(getPK()) > tokens);
+        getBalances().put(getPK(),balanceOf(getPK())- tokens);
+        getBalances().put(pk,balanceOf(pk) + tokens);
+        
+        }
+      catch (Exception e) {
+        }
+    }
+    
+    public void require(boolean condicion)throws  Exception{
+       if (condicion){
+           
+       }
+       else {
+           Exception SinEntradas = new  Exception();
+           throw SinEntradas;
+       }
+    }
 }
