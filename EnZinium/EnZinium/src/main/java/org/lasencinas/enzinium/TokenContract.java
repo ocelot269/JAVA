@@ -111,6 +111,18 @@ public class TokenContract {
         }
     }
     
+    public void transfer(PublicKey sender,PublicKey recipient ,Double tokens) {
+        try {
+        require(balanceOf(getPK()) > tokens);
+        getBalances().put(recipient,balanceOf(recipient) + tokens);
+        getBalances().put(sender,balanceOf(sender) - tokens);
+        
+        }
+      catch (Exception e) {
+        }
+    }
+    
+    
     public void require(boolean condicion)throws  Exception{
        if (condicion){
            
