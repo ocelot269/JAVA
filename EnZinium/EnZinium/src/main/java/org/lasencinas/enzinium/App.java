@@ -133,24 +133,24 @@ public class App {
 //         * Dada una direccion, devuelve su balance de tokens. Si no existe 
 //         * el propietario, devuelve cero.
 //         */
-//        System.out.println("\n" + "Consulta de balances" + "\n" + 
-//                                  "===================="        );
-//
-//        System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
-//
-//        System.out.println("Entradas de Rick: " 
-//                                + ricknillos.balanceOf(rick.getPK()) 
-//                                + " "
-//                                + ricknillos.symbol());
-//
-//        System.out.println("Entradas de Morty: " 
-//                                + ricknillos.balanceOf(morty.getPK())
-//                                + " "
-//                                + ricknillos.symbol());
-//
-//        /**
-//         * Morty quiere comprarle 2 entradas a Rick
-//         * 
+        System.out.println("\n" + "Consulta de balances" + "\n" + 
+                                  "===================="        );
+
+        System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
+
+        System.out.println("Entradas de Rick: " 
+                                + ricknillos.balanceOf(rick.getPK()) 
+                                + " "
+                                + ricknillos.symbol());
+
+        System.out.println("Entradas de Morty: " 
+                                + ricknillos.balanceOf(morty.getPK())
+                                + " "
+                                + ricknillos.symbol());
+
+        /**
+         * Morty quiere comprarle 2 entradas a Rick
+         * 
 //         * transfer()
 //         * @param PublicKey del destinatario
 //         * @param cantidad de tokens

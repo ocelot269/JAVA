@@ -15,6 +15,7 @@ public class TokenContract {
     private Map <PublicKey , Double> balances= new HashMap();
     
     
+    
     //Constructor
     public TokenContract(){
         
@@ -38,7 +39,7 @@ public class TokenContract {
     }
 
     
-    public String getSymbol() {
+    public String symbol() {
         return symbol;
     }
 
@@ -77,7 +78,7 @@ public class TokenContract {
     @Override
     public String toString(){
        return "\n" + "name = " + getName() + "\n" + 
-                      "symbol = " + getSymbol() + "\n" +
+                      "symbol = " + symbol() + "\n" +
                       "totalSupply = " + totalSupply() + "\n" + 
                       "owner PK = " + getPK().hashCode();
   }
@@ -85,7 +86,19 @@ public class TokenContract {
         getBalances().putIfAbsent(PK, unidades);
     }
 
+    public int numOwners(){
+        return getBalances().size();
+    }
     
- 
+    public Double balanceOf(PublicKey pk){
+        if (getBalances().get(pk)==null){
+            return 0d;
+        }
+        else{
+           return getBalances().get(pk);
+        }
+        
+        
+    }
     
 }

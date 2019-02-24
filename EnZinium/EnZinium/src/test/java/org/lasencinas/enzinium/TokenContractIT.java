@@ -31,7 +31,7 @@ public class TokenContractIT {
     @Test
     public void testGetSymbol() {
     token.setSymbol("JJJ");
-    assertEquals("JJJ", token.getSymbol());
+    assertEquals("JJJ", token.symbol());
     }
 
     
