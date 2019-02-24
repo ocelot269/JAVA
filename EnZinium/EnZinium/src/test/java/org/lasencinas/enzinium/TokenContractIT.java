@@ -66,7 +66,33 @@ public class TokenContractIT {
     token1.addOwner(address.getPK(), 500d);
     assertEquals(100d, token1.getBalances().get(address.getPK()),0);
     
+    }
+    @Test
+    public void testNumOwners(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    Address rick = new Address();
+    token1.addOwner(address.getPK(), Double.NaN);
+    token1.addOwner(rick.getPK(), Double.NaN);
+    assertEquals(2, token1.numOwners());
+    }    
     
     
+    @Test
+    public void testBalanceOf(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    Address rick = new Address();
+    token1.addOwner(address.getPK(), null);
+    assertEquals(0d, token1.balanceOf(address.getPK()), 0);
+    }
+    
+    @Test
+    public void testBalanceOf1(){
+    address.generateKeyPair();
+    TokenContract token1 = new TokenContract(address);
+    Address rick = new Address();
+    token1.addOwner(address.getPK(), 100d);
+    assertEquals(100d, token1.balanceOf(address.getPK()), 0);
     }
 }
