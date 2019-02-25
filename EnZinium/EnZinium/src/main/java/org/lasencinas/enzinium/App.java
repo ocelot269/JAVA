@@ -273,29 +273,29 @@ public class App {
                                   "====================="        );
         System.out.println(morty.toString());
 
-//        /** 
-//         * Morty Compra 2 entradas a 5 enZiniums cada una:
-//         * envia una transferencia al contrato de ricknillo 
-//         * por valor de 10 enZiniums:
-//         * 
-//         * send()
-//         * @param contrato
-//         * @param enziniums
-//         * Esta funcion envia esa cantidad de enziniums
-//         * al contrato (¡si la direccion dispone de suficientes enziniums!)
-//         * y actualiza el balance de Morty
-//         * 
-//         * La funcion send() llama a la funcion payable() del contrato:
-//         * 
-//         * payable()
-//         * @param direccion del receptor de los tokens /entradas
-//         * @param cantidad de enziniums
-//         * Esta funcion calcula cuantas entradas se pueden comprar 
-//         * con esa cantidad de enziniums y llama a la funcion
-//         * transfer() del contrato para actualizar los balances 
-//         * de Morty (el receptor) y Rick (el vendedor, propietario
-//         * del contrato).
-//         * 
+        /** 
+         * Morty Compra 2 entradas a 5 enZiniums cada una:
+         * envia una transferencia al contrato de ricknillo 
+         * por valor de 10 enZiniums:
+         * 
+         * send()
+         * @param contrato
+         * @param enziniums
+         * Esta funcion envia esa cantidad de enziniums
+         * al contrato (¡si la direccion dispone de suficientes enziniums!)
+         * y actualiza el balance de Morty
+         * 
+         * La funcion send() llama a la funcion payable() del contrato:
+         * 
+         * payable()
+         * @param direccion del receptor de los tokens /entradas
+         * @param cantidad de enziniums
+         * Esta funcion calcula cuantas entradas se pueden comprar 
+         * con esa cantidad de enziniums y llama a la funcion
+         * transfer() del contrato para actualizar los balances 
+         * de Morty (el receptor) y Rick (el vendedor, propietario
+         * del contrato).
+         * 
 //         * Finalmente, la funcion payable() del contrato le envia
 //         * los enZinium al propietario del contrato (Rick) mediante
 //         * la funcion transfer() de Address:

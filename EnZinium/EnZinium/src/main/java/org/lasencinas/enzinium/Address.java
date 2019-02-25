@@ -75,5 +75,8 @@ public class Address {
         balance+=enziniums;
     }
    
-    
+    public void transferEZI(PrivateKey receptor, double enziniums){
+        
+        
+    }
 }
