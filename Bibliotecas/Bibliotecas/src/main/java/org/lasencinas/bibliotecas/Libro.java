@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.lasencinas.bibliotecas;
 
-/**
- *
- * @author ozeh
- */
-public class Libro {
+
+public class Libro extends Ejemplar {
+    //Variables
     
+    
+    //Constructor
+    public Libro() {
+        
+    }
 }

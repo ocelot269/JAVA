@@ -1,14 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.lasencinas.bibliotecas;
 
-/**
- *
- * @author ozeh
- */
+import java.util.HashSet;
+import java.util.Set;
+
+
 public class Ajuntamiento {
+   private Set<Biblioteca> conjuntoBibliotecas= new HashSet<>();
+   private Set<Ejemplar> listaEjemplares = new HashSet<>();
     
+    public Set<Biblioteca> getConjuntoBibliotecas() {
+        return conjuntoBibliotecas;
+    }
+
+    
+    public void setConjuntoBibliotecas(Set<Biblioteca> ConjuntoBibliotecas) {
+        this.conjuntoBibliotecas = ConjuntoBibliotecas;
+    }
 }

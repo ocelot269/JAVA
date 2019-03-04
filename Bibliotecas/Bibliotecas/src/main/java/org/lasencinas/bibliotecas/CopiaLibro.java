@@ -1,14 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.lasencinas.bibliotecas;
 
-/**
- *
- * @author ozeh
- */
-public class CopiaLibro {
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class CopiaLibro extends CopiaEjemplar {
+    //Variables
     
+    
+    private HashMap<String,Integer> listaLibros = new HashMap<String,Integer>();
+    
+    //Constructor
+    
+    
+    public CopiaLibro(){
+        
+    }
+    
+    //Getters y setters
+    
+    
+    public HashMap<String,Integer> getListaLibros() {
+        return listaLibros;
+    }
+
+    
+    public void setListaLibros(HashMap<String,Integer> listaLibros) {
+        this.listaLibros = listaLibros;
+    }
 }

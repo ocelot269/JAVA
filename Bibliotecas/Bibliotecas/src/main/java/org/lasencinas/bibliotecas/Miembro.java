@@ -9,6 +9,6 @@ package org.lasencinas.bibliotecas;
  *
  * @author ozeh
  */
-public class Miembros {
+public class Miembro {
     
 }
