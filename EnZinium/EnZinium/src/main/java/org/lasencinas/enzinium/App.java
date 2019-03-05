@@ -296,33 +296,33 @@ public class App {
          * de Morty (el receptor) y Rick (el vendedor, propietario
          * del contrato).
          * 
-//         * Finalmente, la funcion payable() del contrato le envia
-//         * los enZinium al propietario del contrato (Rick) mediante
-//         * la funcion transfer() de Address:
-//         * 
-//         * transferEZI()
-//         * @param address del receptor
-//         * @param cantidad de enZiniums
-//         * Actualiza el balance de EZI en la dirección del receptor
-//         * de esos enZiniums
-//         */
-//
-//        morty.send(ricknillos, 10d);
-//
-//        ricknillos.owners();
-//        System.out.println("Owner: " + rick.getPK().hashCode() + " " 
-//                                     + ricknillos.balanceOf(rick.getPK())
-//                                     + " "
-//                                     + ricknillos.symbol());
-//
-//        System.out.println("\n" + "Address de Rick" + "\n" + 
-//                                  "==============="        );
-//        System.out.println(rick.toString());
-//        System.out.println("\n" + "Address de Morty" + "\n" + 
-//                                  "==============="        );
-//        System.out.println(morty.toString());
-//
-//        // verifica que Morty no tiene dinero para comprar una entrada
+         * Finalmente, la funcion payable() del contrato le envia
+         * los enZinium al propietario del contrato (Rick) mediante
+         * la funcion transfer() de Address:
+         * 
+         * transferEZI()
+         * @param address del receptor
+         * @param cantidad de enZiniums
+         * Actualiza el balance de EZI en la dirección del receptor
+         * de esos enZiniums
+         */
+
+        morty.send(ricknillos, 10d);
+
+        ricknillos.owners();
+        System.out.println("Owner: " + rick.getPK().hashCode() + " " 
+                                     + ricknillos.balanceOf(rick.getPK())
+                                     + " "
+                                     + ricknillos.symbol());
+
+        System.out.println("\n" + "Address de Rick" + "\n" + 
+                                  "==============="        );
+        System.out.println(rick.toString());
+        System.out.println("\n" + "Address de Morty" + "\n" + 
+                                  "==============="        );
+        System.out.println(morty.toString());
+
+        // verifica que Morty no tiene dinero para comprar una entrada
 //        morty.send(ricknillos, 3d);
 //
 //        System.out.println("Morty no paga suficientes EZI por una entrada" +
