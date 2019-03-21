@@ -8,8 +8,8 @@ import java.util.Map;
 public class CopiaLibro extends CopiaEjemplar {
     //Variables
     
-    
-    private HashMap<String,Integer> listaLibros = new HashMap<String,Integer>();
+    private Libro libro;
+    private Map<String,Integer> listaLibros = new HashMap<String,Integer>();
     
     //Constructor
     
@@ -21,7 +21,7 @@ public class CopiaLibro extends CopiaEjemplar {
     //Getters y setters
     
     
-    public HashMap<String,Integer> getListaLibros() {
+    public Map<String,Integer> getListaLibros() {
         return listaLibros;
     }
 

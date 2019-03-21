@@ -9,6 +9,8 @@ public class Ejemplar {
     //Variables
     private HashMap<String, Integer> listaLibros = new HashMap<String, Integer>();
     private HashMap<String, Integer> listaRevistas = new HashMap<String, Integer>();
+    private Ajuntamiento ajuntamiento;
+    
 
     //Constructor
     public Ejemplar() {

@@ -10,6 +10,8 @@ public class CopiaEjemplar {
     
     
     private HashMap<String,Integer> listaRevistas = new HashMap<String,Integer>();
+    private Revista revista;
+    private Biblioteca biblioteca;
     
     //Constructor
     

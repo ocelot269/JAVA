@@ -9,6 +9,6 @@ package org.lasencinas.bibliotecas;
  *
  * @author ozeh
  */
-public class Personal {
+public class Personal extends Persona{
     
 }
