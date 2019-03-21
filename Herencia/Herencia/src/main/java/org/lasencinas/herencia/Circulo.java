@@ -1,6 +1,6 @@
 package org.lasencinas.herencia;
 
-public class Circulo extends FiguraGeometrica {
+public class Circulo extends FiguraGeometrica implements Drawable{
 
     private double radio = 0d;
     private String nombre = null;
@@ -36,4 +36,17 @@ public class Circulo extends FiguraGeometrica {
     public double area() {
         return PI * Math.pow(this.radio, 2);
     }
+    
+    public void draw (){
+        System.out.println("Soy un " + getNombre());
+    }
+
+    @Override
+    public void applyTheme() {
+        System.out.println("Tema xulo a un " + getNombre());
+        
+    }
+
+    
+    
 }

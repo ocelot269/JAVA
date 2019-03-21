@@ -1,6 +1,6 @@
 package org.lasencinas.herencia;
 
-public class Cuadrado extends FiguraGeometrica {
+public class Cuadrado extends FiguraGeometrica implements Drawable{
 
     //Variables
     private double lado = 0d;
@@ -35,5 +35,9 @@ public class Cuadrado extends FiguraGeometrica {
     @Override
     public double area() {
         return Math.pow(getLado(),2);
+    }
+    
+    public void draw (){
+        System.out.println("Soy un " + getNombre());
     }
 }

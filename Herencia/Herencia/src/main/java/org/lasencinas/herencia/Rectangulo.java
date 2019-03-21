@@ -1,6 +1,6 @@
 package org.lasencinas.herencia;
 
-public class Rectangulo extends FiguraGeometrica {
+public class Rectangulo extends FiguraGeometrica implements Drawable{
 
     //Variables
     private double altura = 0d;
@@ -47,5 +47,9 @@ public class Rectangulo extends FiguraGeometrica {
     @Override
     public double area() {
         return getAltura() * getAnchura();
+    }
+    
+    public void draw (){
+        System.out.println("Soy un " + getNombre());
     }
 }

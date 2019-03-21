@@ -1,6 +1,6 @@
 package org.lasencinas.herencia;
 
-public class Elipse extends FiguraGeometrica {
+public class Elipse extends FiguraGeometrica implements Drawable{
 
     //Variables
     private double semiEjeMayor = 0d;
@@ -8,7 +8,7 @@ public class Elipse extends FiguraGeometrica {
     private final double PI = Math.PI;
 
     //Constructor
-    public Elipse() {
+    public Elipse () {
         super();
     }
     
@@ -52,5 +52,9 @@ public class Elipse extends FiguraGeometrica {
     public double area() {
         return PI * getSemiEjeMayor() * getSemiEjemenor();
     }
-
+    
+    
+    public void draw (){
+        System.out.println("Soy un " + getNombre());
+    }
 }
