@@ -3,7 +3,7 @@ package org.lasencinas.solid_dip;
 
 import org.lasencinas.solid_dip.InventarioBBDD;
 
-public class ControladorEstoc {
+public class ControladorEstoc implements Available{
 
 	private final InventarioBBDD inventario;
 	
