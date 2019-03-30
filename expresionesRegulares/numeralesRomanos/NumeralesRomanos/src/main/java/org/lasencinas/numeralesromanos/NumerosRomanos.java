@@ -2,24 +2,36 @@ package org.lasencinas.numeralesromanos;
 
 public class NumerosRomanos {
 
+    
+    
+    
+    //Constructor
     public NumerosRomanos() {
 
     }
 
+    
+    
+    
+    
+    
+    
+    //Logica
     public int calcularNumRomanosRestan(String numerosRomanos) {
-        int contador = 0;
+        
+        int sumaNumerosNegativos = 0; //Suma total de los pares que restan
 
         for (NumeralesRomanos.numeralesRomanos numeros : NumeralesRomanos.numeralesRomanos.getNumerosRomanosRestan()) {
 
-            if (numerosRomanos.contains(numeros.getLetraRomana())) {
-                numerosRomanos.replace(numeros.getLetraRomana(), "");
-                contador += numeros.getValorNumeroRomano();
+            if (numerosRomanos.contains(numeros.getLetraRomana())) {  //Comprueba que el string que nos pasa tenga numeros del grupodeNegativos
+                numerosRomanos.replaceFirst(numeros.getLetraRomana(), "");//Remueve la primera pareja de negativos del String
+                sumaNumerosNegativos += numeros.getValorNumeroRomano(); //Contador
             } else {
-
+                //Para un caso inesperado
             }
 
         }
-        return contador;
+        return sumaNumerosNegativos;
     }
 
     public int traductorNumeroRomano(String numeroString) {

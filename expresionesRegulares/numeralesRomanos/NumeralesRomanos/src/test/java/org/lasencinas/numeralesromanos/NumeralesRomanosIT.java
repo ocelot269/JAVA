@@ -24,10 +24,10 @@ public class NumeralesRomanosIT {
         }
         assertThat(acumuladorNumRomanos).isEqualTo(numeralesRomanos.values().length);
     }
-    
+
     @Before
-    public void setUp(){
-         test = new NumerosRomanos();
+    public void setUp() {
+        test = new NumerosRomanos();
     }
 
     @Test
@@ -50,9 +50,9 @@ public class NumeralesRomanosIT {
 
     @Test
     public void traductorTest() {
-        
+
         String mil = "M";
-        assertEquals(1000,test.traductorNumeroRomano(mil));
+        assertEquals(1000, test.traductorNumeroRomano(mil));
         String quinientos = "D";
         assertEquals(500, test.traductorNumeroRomano(quinientos));
         String cien = "C";
@@ -67,35 +67,34 @@ public class NumeralesRomanosIT {
         assertEquals(4, test.traductorNumeroRomano(cuatro));
         String nueve = "IX";
         assertEquals(9, test.traductorNumeroRomano(nueve));
-        
+
     }
+
     @Test
-    public void calcularNumRomanosRestanTest(){
-        String cuatro="IV";
-        assertEquals(4,test.calcularNumRomanosRestan(cuatro));
-        
+    public void calcularNumRomanosRestanTest() {
+        String cuatro = "IV";
+        assertEquals(4, test.calcularNumRomanosRestan(cuatro));
 
         String nueve = "IX";
-        assertEquals(9,test.calcularNumRomanosRestan(nueve));
+        assertEquals(9, test.calcularNumRomanosRestan(nueve));
 
-        String DiezYnueve ="XIX";
-        assertEquals(9,test.calcularNumRomanosRestan(DiezYnueve));
+        String DiezYnueve = "XIX";
+        assertEquals(9, test.calcularNumRomanosRestan(DiezYnueve));
 
         String trece = "IVIX";
-        assertEquals(13,test.calcularNumRomanosRestan(trece));
+        assertEquals(13, test.calcularNumRomanosRestan(trece));
 
         //Actualmente no pasa este caso test
 //        String ocho ="IVIV";
 //        assertEquals(8,test.calcularNumRomanosRestan(ocho));
+        String cuatroCuarentaNueve = "CDXLIX";
+        assertEquals(449, test.calcularNumRomanosRestan(cuatroCuarentaNueve));
 
-       String cuatroCuarentaNueve="CDXLIX";
-        assertEquals(449,test.calcularNumRomanosRestan(cuatroCuarentaNueve));
-        
-        String novecientoNoventaCinco="CMXCV";
-        assertEquals(990,test.calcularNumRomanosRestan(novecientoNoventaCinco));
-        
-        String trescientosCuarentaNueve= "CCCXLIX";
-        assertEquals(49,test.calcularNumRomanosRestan(trescientosCuarentaNueve));
-        
+        String novecientoNoventaCinco = "CMXCV";
+        assertEquals(990, test.calcularNumRomanosRestan(novecientoNoventaCinco));
+
+        String trescientosCuarentaNueve = "CCCXLIX";
+        assertEquals(49, test.calcularNumRomanosRestan(trescientosCuarentaNueve));
+
     }
 }
