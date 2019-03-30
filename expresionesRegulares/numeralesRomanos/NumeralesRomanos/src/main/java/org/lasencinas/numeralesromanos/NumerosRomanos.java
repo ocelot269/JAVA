@@ -2,23 +2,15 @@ package org.lasencinas.numeralesromanos;
 
 public class NumerosRomanos {
 
-    
-    
-    
     //Constructor
     public NumerosRomanos() {
 
     }
 
-    
-    
-    
-    
-    
-    
     //Logica
+                                //Aplicando S.O de SOLID
     public int calcularNumRomanosRestan(String numerosRomanos) {
-        
+
         int sumaNumerosNegativos = 0; //Suma total de los pares que restan
 
         for (NumeralesRomanos.numeralesRomanos numeros : NumeralesRomanos.numeralesRomanos.getNumerosRomanosRestan()) {
@@ -34,21 +26,23 @@ public class NumerosRomanos {
         return sumaNumerosNegativos;
     }
 
-    public int traductorNumeroRomano(String numeroString) {
+    public int SumadorNumeroRomano(String numeroString) {
 
-        int numeroRomano = 0;
+        int totalSuma =0;
 
-        for (NumeralesRomanos.numeralesRomanos elemento : NumeralesRomanos.numeralesRomanos.values()) {
+        for (NumeralesRomanos.numeralesRomanos elemento : NumeralesRomanos.numeralesRomanos.getNumerosRomanosSuman()) {
 
             for (int i = 0; i < numeroString.length(); i++) {
 
-                if (numeroString.substring(i) != elemento.getLetraRomana()) {
-
+                if (numeroString.charAt(i) != elemento.getLetraRomana().charAt(0)) {
+                   
+                     
                 } else {
-                    numeroRomano += elemento.getValorNumeroRomano();
+                     totalSuma += elemento.getValorNumeroRomano();                   
+                
                 }
             }
         }
-        return numeroRomano;
+        return totalSuma;
     }
 }

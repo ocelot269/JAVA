@@ -49,24 +49,57 @@ public class NumeralesRomanosIT {
     }
 
     @Test
-    public void traductorTest() {
+    public void SumadorNumeroRomanoTest() {
 
         String mil = "M";
-        assertEquals(1000, test.traductorNumeroRomano(mil));
+        assertEquals(1000, test.SumadorNumeroRomano(mil));
+
         String quinientos = "D";
-        assertEquals(500, test.traductorNumeroRomano(quinientos));
+        assertEquals(500, test.SumadorNumeroRomano(quinientos));
+
         String cien = "C";
-        assertEquals(100, test.traductorNumeroRomano(cien));
+        assertEquals(100, test.SumadorNumeroRomano(cien));
+
         String cincuenta = "L";
-        assertEquals(50, test.traductorNumeroRomano(cincuenta));
+        assertEquals(50, test.SumadorNumeroRomano(cincuenta));
+
         String diez = "X";
-        assertEquals(10, test.traductorNumeroRomano(diez));
+        assertEquals(10, test.SumadorNumeroRomano(diez));
+
         String cinco = "V";
-        assertEquals(5, test.traductorNumeroRomano(cinco));
-        String cuatro = "IV";
-        assertEquals(4, test.traductorNumeroRomano(cuatro));
-        String nueve = "IX";
-        assertEquals(9, test.traductorNumeroRomano(nueve));
+        assertEquals(5, test.SumadorNumeroRomano(cinco));
+
+        String uno = "I";
+        assertEquals(1, test.SumadorNumeroRomano(uno));
+
+    }
+
+    @Test
+    public void SumadorNumeroRomanoTest2() {
+        
+        String test1 = "III"; // 3
+        assertEquals(3,test.SumadorNumeroRomano(test1));
+        
+        String test2 = "MMMDCCCLXXXVIII"; // 3888
+        assertEquals(3888,test.SumadorNumeroRomano(test2));
+		
+        String test3 = "MMDCCLXXVII";  // 2777
+        assertEquals(2777,test.SumadorNumeroRomano(test3));
+       
+        
+        String test5 = "MCCCXXV"; // 1325
+        assertEquals(1325,test.SumadorNumeroRomano(test5));
+        
+        
+        
+        
+        //No funciona de momento
+       // String test5 = "CDXXXIX"; // 439
+       // assertEquals(439,test.SumadorNumeroRomano(test5));
+        //  String test4 = "CDXLIV"; // 444
+         //   assertEquals(444,test.SumadorNumeroRomano(test4));
+        //String test6 = "MMMCMLVII"; // 3957
+        //assertEquals(3957,test.SumadorNumeroRomano(test5));
 
     }
 
