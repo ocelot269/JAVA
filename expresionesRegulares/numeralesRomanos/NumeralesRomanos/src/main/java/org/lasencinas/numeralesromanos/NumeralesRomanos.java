@@ -1,8 +1,10 @@
 package org.lasencinas.numeralesromanos;
 
+import java.util.EnumSet;
+
 public class NumeralesRomanos {
 
-    public enum NumerosRomanos {
+    public enum numeralesRomanos {
         
         UNO("I", 1),
         CINCO("V", 5),
@@ -23,7 +25,7 @@ public class NumeralesRomanos {
         private Integer valorNumeroRomano = 0;
         private String letraRomana;
 
-        NumerosRomanos(String letra, Integer valor) {
+        numeralesRomanos(String letra, Integer valor) {
             this.valorNumeroRomano = valor;
             this.letraRomana = letra;
 
@@ -37,8 +39,12 @@ public class NumeralesRomanos {
             return letraRomana;
         }
 
-        Object traductorNumeroRomano(String mil) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        public static EnumSet<numeralesRomanos> getNumerosRomanosSuman(){
+           return EnumSet.range(UNO, MIL);
+        }
+        
+        public static EnumSet<numeralesRomanos> getNumerosRomanosRestan(){
+           return EnumSet.complementOf(getNumerosRomanosSuman());
         }
 
     }
