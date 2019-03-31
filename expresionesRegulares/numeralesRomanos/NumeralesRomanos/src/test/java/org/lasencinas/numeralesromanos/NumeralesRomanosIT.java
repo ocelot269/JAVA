@@ -168,6 +168,14 @@ public class NumeralesRomanosIT {
 
         String test6 = "CCCC";
         assertEquals(false, test.validadorNumeroRomanos(test6));
-
+        
+        String test7 = "L";
+        assertEquals(true, test.validadorNumeroRomanos(test7));
+        
+        String test8 = "VV";
+        assertEquals(false, test.validadorNumeroRomanos(test8));
+        
+        String test9 = "V";
+        assertEquals(true, test.validadorNumeroRomanos(test9));
     }
 }
