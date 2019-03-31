@@ -11,7 +11,7 @@ public class NumerosRomanos {
     }
 
     //Logica
-                                //Aplicando S.O de SOLID
+    //Aplicando S.O de SOLID
     public int calcularNumRomanosRestan(String numerosRomanos) {
 
         int sumaNumerosNegativos = 0; //Suma total de los pares que restan
@@ -28,40 +28,37 @@ public class NumerosRomanos {
         }
         return sumaNumerosNegativos;
     }
-    
-    
-                              //Aplicando S.O de SOLID
+
+    //Aplicando S.O de SOLID
     public int calcularNumerosRomanosSuman(String numeroRomano) {
 
-        int totalSumaNumerosRomanos =0;
+        int totalSumaNumerosRomanos = 0;
 
         for (NumeralesRomanos.numeralesRomanos elemento : NumeralesRomanos.numeralesRomanos.getNumerosRomanosSuman()) {
 
             for (int i = 0; i < numeroRomano.length(); i++) {
 
-                if (numeroRomano.charAt(i) != elemento.getLetraRomana().charAt(0)) { 
-                 //Si la letra del string es distinta a la primera posicion de la letra de los enums que "suman", 
-                //Entonces pasa porque sera el caso mas problable     
+                if (numeroRomano.charAt(i) != elemento.getLetraRomana().charAt(0)) {
+                    //Si la letra del string es distinta a la primera posicion de la letra de los enums que "suman", 
+                    //Entonces pasa porque sera el caso mas problable     
                 } else { //va sumando el valor de cada letra del string
-                     totalSumaNumerosRomanos += elemento.getValorNumeroRomano();  //Contador                
-                
+                    totalSumaNumerosRomanos += elemento.getValorNumeroRomano();  //Contador                
+
                 }
             }
         }
         return totalSumaNumerosRomanos;
     }
-    
-    
-    public boolean validadorNumeroRomanos(String NumeroRomano){
-        
-            Pattern verificador=Pattern.compile("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})");
-            Matcher ma = verificador.matcher(NumeroRomano);
+
+    public boolean validadorNumeroRomanos(String NumeroRomano) {
+
+        Pattern verificador = Pattern.compile("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IV|IX|V?I{0,3})$");
+        Matcher ma = verificador.matcher(NumeroRomano);
         return ma.matches();
-        
+
     }
-    
-    
-    public int traductorNumerosRomanos(String numeroRomano){
+
+    public int traductorNumerosRomanos(String numeroRomano) {
         return calcularNumRomanosRestan(numeroRomano) + calcularNumerosRomanosSuman(numeroRomano);
     }
 }
