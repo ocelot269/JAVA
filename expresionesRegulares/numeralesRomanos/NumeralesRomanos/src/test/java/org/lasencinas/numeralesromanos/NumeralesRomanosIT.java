@@ -76,25 +76,24 @@ public class NumeralesRomanosIT {
 
     @Test
     public void calcularNumerosRomanosSumanTest2() {
-        
+
         String test1 = "III"; // 3
-        assertEquals(3,test.calcularNumerosRomanosSuman(test1));
-        
+        assertEquals(3, test.calcularNumerosRomanosSuman(test1));
+
         String test2 = "MMMDCCCLXXXVIII"; // 3888
-        assertEquals(3888,test.calcularNumerosRomanosSuman(test2));
-		
+        assertEquals(3888, test.calcularNumerosRomanosSuman(test2));
+
         String test3 = "MMDCCLXXVII";  // 2777
-        assertEquals(2777,test.calcularNumerosRomanosSuman(test3));
-       
-        
+        assertEquals(2777, test.calcularNumerosRomanosSuman(test3));
+
         String test5 = "MCCCXXV"; // 1325
-        assertEquals(1325,test.calcularNumerosRomanosSuman(test5));
-        
+        assertEquals(1325, test.calcularNumerosRomanosSuman(test5));
+
     }
-    
+
     @Test
-    public void traductorNumerosRomanosTest(){
-        
+    public void traductorNumerosRomanosTest() {
+
 //          
 //        //No funciona de momento
 //        String test5 = "CDXXXIX"; // 439
@@ -105,6 +104,7 @@ public class NumeralesRomanosIT {
 //        assertEquals(3957,test.calcularNumerosRomanosSuman(test6));
 //        
     }
+
     @Test
     public void calcularNumRomanosRestanTest() {
         String cuatro = "IV";
@@ -132,24 +132,42 @@ public class NumeralesRomanosIT {
         assertEquals(49, test.calcularNumRomanosRestan(trescientosCuarentaNueve));
 
     }
-    
-    
+
     @Test
-    public void validadorNumeroRomanosTest(){
-        
+    public void validadorNumeroRomanosTest() {
+
         String uno = "M";
         assertEquals(true, test.validadorNumeroRomanos(uno));
-        
+
         String dos = "MM";
         assertEquals(true, test.validadorNumeroRomanos(dos));
-        
+
         String tres = "MMM";
         assertEquals(true, test.validadorNumeroRomanos(tres));
-        
+
         String cuatro = "MMMM";
         assertEquals(false, test.validadorNumeroRomanos(cuatro));
-        
+
         String emes = "MMMMMM";
         assertEquals(false, test.validadorNumeroRomanos(emes));
+
+        String test1 = "C";
+        assertEquals(true, test.validadorNumeroRomanos(test1));
+
+        String test2 = "CCC";
+        assertEquals(true, test.validadorNumeroRomanos(test2));
+
+        String test3 = "CC";
+        assertEquals(true, test.validadorNumeroRomanos(test3));
+
+        String test4 = "D";
+        assertEquals(true, test.validadorNumeroRomanos(test4));
+
+        String test5 = "DD";
+        assertEquals(false, test.validadorNumeroRomanos(test5));
+
+        String test6 = "CCCC";
+        assertEquals(false, test.validadorNumeroRomanos(test6));
+
     }
 }
