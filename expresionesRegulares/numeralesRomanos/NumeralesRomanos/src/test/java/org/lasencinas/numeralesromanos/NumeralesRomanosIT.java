@@ -172,11 +172,11 @@ public class NumeralesRomanosIT {
         String test7 = "L";
         assertEquals(true, test.validadorNumeroRomanos(test7));
         
-        String test8 = "VV";
-        assertEquals(false, test.validadorNumeroRomanos(test8));
-        
-        String test9 = "V";
-        assertEquals(true, test.validadorNumeroRomanos(test9));
+//        String test8 = "VV";
+//        assertEquals(false, test.validadorNumeroRomanos(test8));
+//        
+//        String test9 = "V";
+//        assertEquals(true, test.validadorNumeroRomanos(test9));
         
         String test10 = "MCD";
         assertEquals(true, test.validadorNumeroRomanos(test10));
@@ -187,7 +187,31 @@ public class NumeralesRomanosIT {
         String test12 = "MCMCD";
         assertEquals(false, test.validadorNumeroRomanos(test12));
         
-        String test13 = "MCMV";
+        String test13 = "MCMX";
         assertEquals(true, test.validadorNumeroRomanos(test13));
+        
+        String test14 = "X";
+        assertEquals(true, test.validadorNumeroRomanos(test14));
+        
+        String test15 = "MCMXC";
+        assertEquals(true, test.validadorNumeroRomanos(test15));
+        
+         String test16 = "XCCC";
+        assertEquals(false, test.validadorNumeroRomanos(test16));
+        
+         String test17 = "XLXL";
+        assertEquals(false, test.validadorNumeroRomanos(test17));
+        
+         String test18 = "MMCMXL";
+        assertEquals(true, test.validadorNumeroRomanos(test18));
+        
+        String test19 = "LL";
+        assertEquals(false, test.validadorNumeroRomanos(test19));
+        
+        String test20 = "L";
+        assertEquals(true, test.validadorNumeroRomanos(test20));
+        
+        
+        
     }
 }

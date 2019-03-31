@@ -54,7 +54,7 @@ public class NumerosRomanos {
     
     public boolean validadorNumeroRomanos(String NumeroRomano){
         
-            Pattern verificador=Pattern.compile("^M{0,3}((CM|CD|D?C{0,3}))([LV])?");
+            Pattern verificador=Pattern.compile("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})");
             Matcher ma = verificador.matcher(NumeroRomano);
         return ma.matches();
         
