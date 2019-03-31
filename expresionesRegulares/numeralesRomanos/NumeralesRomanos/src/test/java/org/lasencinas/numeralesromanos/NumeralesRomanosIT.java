@@ -177,5 +177,17 @@ public class NumeralesRomanosIT {
         
         String test9 = "V";
         assertEquals(true, test.validadorNumeroRomanos(test9));
+        
+        String test10 = "MCD";
+        assertEquals(true, test.validadorNumeroRomanos(test10));
+        
+        String test11 = "MCDD";
+        assertEquals(false, test.validadorNumeroRomanos(test11));
+        
+        String test12 = "MCMCD";
+        assertEquals(false, test.validadorNumeroRomanos(test12));
+        
+        String test13 = "MCMV";
+        assertEquals(true, test.validadorNumeroRomanos(test13));
     }
 }
