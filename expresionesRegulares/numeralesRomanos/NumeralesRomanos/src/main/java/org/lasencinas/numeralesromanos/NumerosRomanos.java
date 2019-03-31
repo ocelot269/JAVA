@@ -1,5 +1,8 @@
 package org.lasencinas.numeralesromanos;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class NumerosRomanos {
 
     //Constructor
@@ -28,15 +31,15 @@ public class NumerosRomanos {
     
     
                               //Aplicando S.O de SOLID
-    public int calcularNumerosRomanosSuman(String numeroString) {
+    public int calcularNumerosRomanosSuman(String numeroRomano) {
 
         int totalSumaNumerosRomanos =0;
 
         for (NumeralesRomanos.numeralesRomanos elemento : NumeralesRomanos.numeralesRomanos.getNumerosRomanosSuman()) {
 
-            for (int i = 0; i < numeroString.length(); i++) {
+            for (int i = 0; i < numeroRomano.length(); i++) {
 
-                if (numeroString.charAt(i) != elemento.getLetraRomana().charAt(0)) { 
+                if (numeroRomano.charAt(i) != elemento.getLetraRomana().charAt(0)) { 
                  //Si la letra del string es distinta a la primera posicion de la letra de los enums que "suman", 
                 //Entonces pasa porque sera el caso mas problable     
                 } else { //va sumando el valor de cada letra del string
@@ -46,5 +49,19 @@ public class NumerosRomanos {
             }
         }
         return totalSumaNumerosRomanos;
+    }
+    
+    
+    public boolean validadorNumeroRomanos(String NumeroRomano){
+        
+            Pattern verificador=Pattern.compile("^M{1,3}");
+            Matcher ma = verificador.matcher(NumeroRomano);
+        return ma.matches();
+        
+    }
+    
+    
+    public int traductorNumerosRomanos(String numeroRomano){
+        return calcularNumRomanosRestan(numeroRomano) + calcularNumerosRomanosSuman(numeroRomano);
     }
 }
