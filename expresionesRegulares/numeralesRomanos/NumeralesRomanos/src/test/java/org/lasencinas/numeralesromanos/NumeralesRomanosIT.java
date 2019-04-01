@@ -27,14 +27,14 @@ public class NumeralesRomanosIT {
 
     @Test
     public void RomanConstructorTest() {
-        numeralesRomanos numero = numeralesRomanos.UNO;
+        numeralesRomanos numero = numeralesRomanos.I;
         assertThat(numero).isInstanceOf(numeralesRomanos.class);
         assertThat(numero.ordinal()).isEqualTo(0);
-        assertThat(numero.name()).isEqualToIgnoringWhitespace("UNO");
-        assertThat(numero.valueOf(numero.name())).isEqualTo(numeralesRomanos.UNO);
+        assertThat(numero.name()).isEqualToIgnoringWhitespace("I");
+        assertThat(numero.valueOf(numero.name())).isEqualTo(numeralesRomanos.I);
         assertThat(numero.compareTo(numero)).isEqualTo(0);
-        assertThat(numero.toString()).isEqualToIgnoringWhitespace("UNO");
-        assertThat(numero.equals(numero.UNO)).isEqualTo(true);
+        assertThat(numero.toString()).isEqualToIgnoringWhitespace("I");
+        assertThat(numero.equals(numero.I)).isEqualTo(true);
         assertThat(numero.values()[0]).isEqualTo(numero);
 
     }

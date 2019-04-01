@@ -6,26 +6,26 @@ public class NumeralesRomanos {
 
     public enum numeralesRomanos {
         
-        UNO("I", 1),
-        CINCO("V", 5),
-        DIEZ("X", 10),
-        CINCUENTA("L", 50),
-        CIEN("C", 100),
-        QUINIENTOS("D", 500),
-        MIL("M", 1000),
-        CUATRO("IV", 4),
-        NUEVE("IX", 9),
-        CUARENTA("XL", 40),
-        NOVENTA("XC", 90),
-        CUATROCIENTOS("CD", 400),
-        NOVECIENTOS("CM", 900);
+        I( 1),
+        V( 5),
+        X(10),
+        L(50),
+        C (100),
+        D (500),
+        M (1000),
+        IV (4),
+        IX (9),
+        XL (40),
+        XC (90),
+        CD (400),
+        CM (900);
 
         private Integer valorNumeroRomano = 0;
-        private String letraRomana;
+        
 
-        numeralesRomanos(String letra, Integer valor) {
+        numeralesRomanos(Integer valor) {
             this.valorNumeroRomano = valor;
-            this.letraRomana = letra;
+          
 
         }
 
@@ -33,16 +33,14 @@ public class NumeralesRomanos {
             return valorNumeroRomano;
         }
 
-        public String getLetraRomana() {
-            return this.letraRomana;
-        }
+       
 
         public static EnumSet<numeralesRomanos> getNumerosRomanosSuman(){
-           return EnumSet.range(UNO, MIL);
+           return EnumSet.range(I, M);
         }
         
         public static EnumSet<numeralesRomanos> getNumerosRomanosRestan(){
-           return EnumSet.complementOf(getNumerosRomanosSuman());
+           return EnumSet.range(IV,CM);
         }
 
     }

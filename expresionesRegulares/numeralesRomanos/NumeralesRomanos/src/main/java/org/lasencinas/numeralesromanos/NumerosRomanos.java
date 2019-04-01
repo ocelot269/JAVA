@@ -53,8 +53,8 @@ public class NumerosRomanos {
 
         for (NumeralesRomanos.numeralesRomanos numeros : NumeralesRomanos.numeralesRomanos.getNumerosRomanosRestan()) {
 
-            if (getNumeroRomano().contains(numeros.getLetraRomana())) {  //Comprueba que el string que nos pasa tenga numeros del grupodeNegativos
-                setNumeroRomano(getNumeroRomano().replace(numeros.getLetraRomana(), ""));//Remueve la primera pareja de negativos del String
+            if (getNumeroRomano().contains(numeros.name())) {  //Comprueba que el string que nos pasa tenga numeros del grupodeNegativos
+                setNumeroRomano(getNumeroRomano().replace(numeros.name(), ""));//Remueve la primera pareja de negativos del String
                 sumaNumerosNegativos += numeros.getValorNumeroRomano(); //Contador
             } else {
                 //Para un caso inesperado
@@ -71,7 +71,7 @@ public class NumerosRomanos {
 
             for (int i = 0; i < getNumeroRomano().length(); i++) {
 
-                if (getNumeroRomano().charAt(i) != elemento.getLetraRomana().charAt(0)) {
+                if (getNumeroRomano().charAt(i) != elemento.name().charAt(0)) {
                     //Si la letra del string es distinta a la primera posicion de la letra de los enums que "suman", 
                     //Entonces pasa porque sera el caso mas problable     
                 } else { //va sumando el valor de cada letra del string
