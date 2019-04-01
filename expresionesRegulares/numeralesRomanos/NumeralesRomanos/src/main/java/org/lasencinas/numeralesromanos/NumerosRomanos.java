@@ -19,15 +19,18 @@ public class NumerosRomanos {
     public String getNumeroRomano() {
         return numeroRomano;
     }
-
+    
+    
     public void setNumeroRomano(String numeroRomano) {
         this.numeroRomano = numeroRomano;
     }
-
+    
+    
     public int getNumeroRomanoTraducido() {
         return this.numeroRomanoTraducido;
     }
-
+    
+    
     public void setValor(int valor) {
         this.numeroRomanoTraducido += valor;
         
@@ -92,7 +95,7 @@ public class NumerosRomanos {
         //Puede contener "XC" "XL" o no  //"L" la puede estar 1 vez o no estar y la "X" de 0 a 3
         //Puede contener "IV" "IX" o no  //"V" la puede estar 1 vez o no estar y la "I" de 0 a 3
         Matcher comparador = verificador.matcher(getNumeroRomano()); //Compara la expresion con el formato del numero romano
-        return comparador.matches();//Te devuelve true o false segun si la expresion es valida
+        return comparador.matches();//Te devuelve true o false segun si la expresion del numero Romano es valido
 
     }
     
