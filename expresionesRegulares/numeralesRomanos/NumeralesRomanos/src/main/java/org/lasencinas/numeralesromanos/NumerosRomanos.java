@@ -4,48 +4,34 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class NumerosRomanos {
-    
+
     //variables
-    
-    
-        private String numeroRomano;
-        private int valor;
-        
-        
+    private String numeroRomano;
+    private int NumeroRomanoTraducido;
+
     //Constructor
-        
-        
     public NumerosRomanos(String numeroRomanos) {
-        this.numeroRomano=numeroRomanos;
+        this.numeroRomano = numeroRomanos;
     }
-    
-    
+
     //getters y setters
-    
-    
     public String getNumeroRomano() {
         return numeroRomano;
     }
 
-    
     public void setNumeroRomano(String numeroRomano) {
         this.numeroRomano = numeroRomano;
     }
 
-
-    public int getValor() {
-        return valor;
+    public int getNumeroRomanoTraducido() {
+        return this.NumeroRomanoTraducido;
     }
 
-    
     public void setValor(int valor) {
-        this.valor += valor;
+        this.NumeroRomanoTraducido += valor;
     }
-    
-    
+
     //Logica
-    
-    
     //Aplicando S.O de SOLID
     public int calcularNumRomanosRestan() {
 
@@ -67,8 +53,6 @@ public class NumerosRomanos {
     //Aplicando S.O de SOLID
     public int calcularNumerosRomanosSuman() {
 
-        
-
         for (NumeralesRomanos.numeralesRomanos elemento : NumeralesRomanos.numeralesRomanos.getNumerosRomanosSuman()) {
 
             for (int i = 0; i < getNumeroRomano().length(); i++) {
@@ -82,23 +66,24 @@ public class NumerosRomanos {
                 }
             }
         }
-        return getValor();
+        return getNumeroRomanoTraducido();
     }
 
-    
-    public boolean validadorNumeroRomanos() {
+    public boolean validadorNumeroRomanos() { //Este metodo te compara el numero romano con tu expresion regular
 
-        Pattern verificador = Pattern.compile("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IV|IX|V?I{0,3})$");
-        Matcher comparador = verificador.matcher(getNumeroRomano());
-        return comparador.matches();
-        
-        
+        Pattern verificador = Pattern.compile("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IV|IX|V?I{0,3})$"); //Expresion regular para numeros romanos
+        //la expresion comprueba que el numero romano empieze con 0 a 3 "M" 
+        //Puede contener "CM" "CD" o no  //"D" la puede estar 1 vez o no estar y la "C" de 0 a 3
+        //Puede contener "XC" "XL" o no  //"L" la puede estar 1 vez o no estar y la "X" de 0 a 3
+        //Puede contener "IV" "IX" o no  //"V" la puede estar 1 vez o no estar y la "I" de 0 a 3
+        Matcher comparador = verificador.matcher(getNumeroRomano()); //Compara la expresion con el formato del numero romano
+        return comparador.matches();//Te devuelve true o false segun si la expresion es valida
+
     }
 
-    
     public int traductorNumerosRomanos() {
         int resultado = 0;
-        
+
         if (validadorNumeroRomanos()) {
             resultado = calcularNumRomanosRestan() + calcularNumerosRomanosSuman();
         } else {
@@ -106,9 +91,5 @@ public class NumerosRomanos {
         }
         return resultado;
     }
-
-  
-
-   
 
 }

@@ -97,16 +97,15 @@ public class NumeralesRomanosIT {
     @Test
     public void traductorNumerosRomanosTest() {
 
-        
         String test1 = "CDXXXIX"; // 439
         NumerosRomanos numero = new NumerosRomanos(test1);
-        
+
         assertEquals(439, numero.traductorNumerosRomanos());
         String test2 = "CDXLIV"; // 444
-        
+
         NumerosRomanos numero1 = new NumerosRomanos(test2);
         assertEquals(444, numero1.traductorNumerosRomanos());
-        
+
         String test3 = "MMMCMLVII"; // 3957
         NumerosRomanos numero2 = new NumerosRomanos(test3);
         assertEquals(3957, numero2.traductorNumerosRomanos());
@@ -131,11 +130,10 @@ public class NumeralesRomanosIT {
         NumerosRomanos numero3 = new NumerosRomanos(trece);
         assertEquals(13, numero3.calcularNumRomanosRestan());
 
-        
-        String ocho ="IVIV";
+        String ocho = "IVIV";
         NumerosRomanos numero4 = new NumerosRomanos(ocho);
-        assertEquals(0,numero4.traductorNumerosRomanos());
-        
+        assertEquals(0, numero4.traductorNumerosRomanos());
+
         String cuatroCuarentaNueve = "CDXLIX";
         NumerosRomanos numero5 = new NumerosRomanos(cuatroCuarentaNueve);
         assertEquals(449, numero5.calcularNumRomanosRestan());
@@ -204,17 +202,17 @@ public class NumeralesRomanosIT {
         String test8 = "VV";
         NumerosRomanos numero12 = new NumerosRomanos(test8);
         assertEquals(false, numero12.validadorNumeroRomanos());
-        
+
         String test9 = "V";
         NumerosRomanos numero13 = new NumerosRomanos(test9);
         assertEquals(true, numero13.validadorNumeroRomanos());
-        
+
         String test10 = "MCD";
         NumerosRomanos numero14 = new NumerosRomanos(test10);
         assertEquals(true, numero14.validadorNumeroRomanos());
 
         String test11 = "MCDD";
-        NumerosRomanos numero15= new NumerosRomanos(test11);
+        NumerosRomanos numero15 = new NumerosRomanos(test11);
         assertEquals(false, numero15.validadorNumeroRomanos());
 
         String test12 = "MCMCD";
@@ -252,42 +250,42 @@ public class NumeralesRomanosIT {
         String test20 = "L";
         NumerosRomanos numero24 = new NumerosRomanos(test20);
         assertEquals(true, numero24.validadorNumeroRomanos());
-        
+
         String test21 = "I";
         NumerosRomanos numero25 = new NumerosRomanos(test21);
         assertEquals(true, numero25.validadorNumeroRomanos());
-        
+
         String test22 = "III";
         NumerosRomanos numero26 = new NumerosRomanos(test22);
         assertEquals(true, numero26.validadorNumeroRomanos());
-        
+
         String test23 = "IIII";
         NumerosRomanos numero27 = new NumerosRomanos(test23);
         assertEquals(false, numero27.validadorNumeroRomanos());
-        
+
         String test24 = "IV";
         NumerosRomanos numero28 = new NumerosRomanos(test24);
         assertEquals(true, numero28.validadorNumeroRomanos());
-       
+
         String test25 = "IX";
         NumerosRomanos numero29 = new NumerosRomanos(test25);
         assertEquals(true, numero29.validadorNumeroRomanos());
-        
+
         String test26 = "XIMXVI";
         NumerosRomanos numero30 = new NumerosRomanos(test26);
         assertEquals(false, numero30.validadorNumeroRomanos());
-        
-        String test27="MMMCDLXXXIX";
+
+        String test27 = "MMMCDLXXXIX";
         NumerosRomanos numero31 = new NumerosRomanos(test27);
         assertEquals(true, numero31.validadorNumeroRomanos());
-        
-        String test28="CDXLIV";
+
+        String test28 = "CDXLIV";
         NumerosRomanos numero32 = new NumerosRomanos(test28);
         assertEquals(true, numero32.validadorNumeroRomanos());
-        
-        String test29="MCMLXXXV";
+
+        String test29 = "MCMLXXXV";
         NumerosRomanos numero33 = new NumerosRomanos(test29);
         assertEquals(true, numero33.validadorNumeroRomanos());
-        
-}
+
+    }
 }
