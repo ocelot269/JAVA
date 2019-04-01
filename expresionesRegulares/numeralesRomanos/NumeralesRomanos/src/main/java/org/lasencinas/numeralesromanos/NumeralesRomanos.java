@@ -20,8 +20,6 @@ public class NumeralesRomanos {
         CUATROCIENTOS("CD", 400),
         NOVECIENTOS("CM", 900);
 
-        ;
-
         private Integer valorNumeroRomano = 0;
         private String letraRomana;
 
@@ -36,7 +34,7 @@ public class NumeralesRomanos {
         }
 
         public String getLetraRomana() {
-            return letraRomana;
+            return this.letraRomana;
         }
 
         public static EnumSet<numeralesRomanos> getNumerosRomanosSuman(){
