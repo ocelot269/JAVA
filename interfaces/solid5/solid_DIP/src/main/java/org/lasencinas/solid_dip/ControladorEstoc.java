@@ -5,9 +5,9 @@ import org.lasencinas.solid_dip.InventarioBBDD;
 
 public class ControladorEstoc implements Available{
 
-	private final InventarioBBDD inventario;
+	private final Inventeable inventario;
 	
-	public ControladorEstoc(InventarioBBDD inventario) {
+	public ControladorEstoc(Inventeable inventario) {
 		this.inventario = inventario;
 	}
 
